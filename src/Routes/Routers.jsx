@@ -4,9 +4,11 @@ import Root from "./Root/Root";
 import Home from "../Pages/Home/Home";
 import AboutUs from "../Pages/AboutUs/AboutUs";
 import ErrorPage from "../Pages/ErrorPage/ErrorPage";
-import Projects from "../Pages/Projects/Projects";
+
 import Services from "../Pages/Services/Services";
 import Contacts from "../Pages/contact/Contact";
+import PortfolioPage from "../Components/Projects/PortfolioPage";
+
 
 
 
@@ -23,7 +25,7 @@ const Routers = () => {
       
       <Route index element={<Home/>}></Route>
       <Route path="/aboutUs" element={<AboutUs/>}></Route>
-      <Route path="/projects" element={<Projects/>}></Route>
+      <Route path="/projects" element={<PortfolioPage/>}></Route>
       <Route path="/services" element={<Services/>}> </Route>
       <Route path="/contact" element={<Contacts/>}> </Route>
       
