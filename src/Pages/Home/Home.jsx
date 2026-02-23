@@ -4,6 +4,7 @@ import StatsSection from '../../Components/Home/StatsSection';
 import ProjectsSection from '../../Components/Home/ProjectsSection';
 import LatestUpdates from '../../Components/Home/LatestUpdates';
 import Footer from '../../Components/Home/Footer';
+import StrategicPartners from '../../Components/Home/StrategicPartners';
 
 
 const Home = () => {
@@ -17,6 +18,7 @@ const Home = () => {
     <StatsSection/>
 
     <ProjectsSection/>
+    <StrategicPartners/>
 
     <LatestUpdates/>
 
