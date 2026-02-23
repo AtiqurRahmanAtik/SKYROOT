@@ -1,0 +1,35 @@
+import daisyui from "daisyui";
+
+/** @type {import('tailwindcss').Config} */
+export default {
+  darkMode: 'class', 
+  
+  content: [
+    "./src/**/*.{js,jsx,ts,tsx}",
+  ],
+  theme: {
+    extend: {
+      colors: {
+        primary: "#66cc00",
+        secondary: "#336600",
+      },
+    },
+  },
+  plugins: [daisyui], // Swapped require() for the imported variable
+  daisyui: {
+    themes: [
+      {
+        mytheme: {
+          primary: "#FF0000", // Removed the trailing space here
+          secondary: "#336600",
+          accent: "#37cdbe", 
+          neutral: "#3d4451",
+          "base-100": "#ffffff", 
+          "base-content": "#1f2937",
+        },
+      },
+      "light",
+      "dark"
+    ],
+  },
+};
