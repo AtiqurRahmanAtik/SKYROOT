@@ -2,6 +2,16 @@ import { Link } from 'react-router-dom';
 import { Mail, Phone, MapPin, Facebook, Linkedin, Instagram, Globe } from 'lucide-react';
 import Logo from '../assets/logo.svg';
 
+
+ const policyLinks = [
+    { name: 'Terms of Use', path: '/termsOfUse' },
+    { name: 'Privacy Policy', path: '/privacy' },
+    { name: 'Cookies Policy', path: '/cookies' },
+    { name: 'Refund Policy', path: '/refund' },
+  ];
+
+
+
 export const Footer = () => {
   return (
     <footer className="bg-neutral text-white pt-20 pb-10">
@@ -69,6 +79,21 @@ export const Footer = () => {
               </button>
             </div>
           </div>
+        </div>
+
+
+        <div>
+           <h4 className="text-sm font-semibold text-white mb-3">Legal</h4>
+           
+            <ul className="flex flex-col gap-2">
+              {policyLinks.map((link, index) => (
+                <li key={index}>
+                  <Link to={link.path} className="text-[13px] text-gray-400 hover:text-[#d4af37] transition-colors">
+                    {link.name}
+                  </Link>
+                </li>
+              ))}
+            </ul>
         </div>
 
         <div className="pt-10 border-t border-white/10 flex flex-col md:flex-row justify-between items-center gap-6">
