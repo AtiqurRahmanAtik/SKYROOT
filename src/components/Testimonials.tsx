@@ -33,14 +33,14 @@ export const Testimonials = () => {
           <div className="flex items-center gap-4">
             <button 
               onClick={prevTestimonial}
-              className="w-14 h-14 rounded-full border border-neutral/20 flex items-center justify-center text-neutral hover:bg-neutral hover:text-white transition-all duration-300 group bg-white"
+              className="w-14 h-14 rounded-full border border-neutral/20 bg-primary flex items-center justify-center  hover:bg-neutral hover:text-white transition-all duration-300 group text-white"
               aria-label="Previous testimonial"
             >
               <ArrowLeft className="w-6 h-6 group-hover:-translate-x-1 transition-transform" />
             </button>
             <button 
               onClick={nextTestimonial}
-              className="w-14 h-14 rounded-full border border-neutral/20 flex items-center justify-center text-neutral hover:bg-neutral hover:text-white transition-all duration-300 group bg-white"
+              className="w-14 h-14 rounded-full border border-neutral/20 flex items-center justify-center  hover:bg-neutral hover:text-white transition-all duration-300 group bg-primary text-white"
               aria-label="Next testimonial"
             >
               <ArrowRight className="w-6 h-6 group-hover:translate-x-1 transition-transform" />
@@ -76,7 +76,7 @@ export const Testimonials = () => {
               <div className="lg:col-span-7 space-y-10 order-1 lg:order-2">
                 <div className="flex gap-1">
                   {[...Array(testimonials[currentIndex].rating)].map((_, i) => (
-                    <Star key={i} className="w-6 h-6 text-secondary fill-current" />
+                    <Star key={i} className="w-6 h-6 text-primary fill-current" />
                   ))}
                 </div>
 
@@ -95,7 +95,7 @@ export const Testimonials = () => {
                     <h4 className="text-xl font-bold text-neutral">
                       {testimonials[currentIndex].author}
                     </h4>
-                    <p className="text-secondary font-medium">
+                    <p className="text-primary font-medium">
                       {testimonials[currentIndex].role}
                     </p>
                     <p className="text-neutral/40 text-sm mt-1">

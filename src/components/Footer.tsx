@@ -15,13 +15,13 @@ export const Footer = () => {
               A premier corporate real estate developer dedicated to structural excellence and urban innovation. Setting the benchmark for over 15 years.
             </p>
             <div className="flex gap-4">
-              <a href="#" className="p-2 bg-white/5 rounded-full hover:bg-secondary transition-colors">
+              <a href="#" className="p-2 bg-primary rounded-full hover:bg-primary transition-colors">
                 <Facebook className="w-4 h-4" />
               </a>
-              <a href="#" className="p-2 bg-white/5 rounded-full hover:bg-secondary transition-colors">
+              <a href="#" className="p-2 bg-primary  rounded-full hover:bg-primary transition-colors">
                 <Linkedin className="w-4 h-4" />
               </a>
-              <a href="#" className="p-2 bg-white/5 rounded-full hover:bg-secondary transition-colors">
+              <a href="#" className="p-2 bg-primary  rounded-full hover:bg-primary transition-colors">
                 <Instagram className="w-4 h-4" />
               </a>
             </div>
@@ -41,15 +41,15 @@ export const Footer = () => {
             <h4 className="font-bold text-lg mb-6">Contact</h4>
             <ul className="space-y-4 text-base-100/60 text-sm">
               <li className="flex items-start gap-3">
-                <MapPin className="w-5 h-5 text-secondary shrink-0" />
+                <MapPin className="w-5 h-5 text-primary shrink-0" />
                 <span>House 123, Road 45, Gulshan, Dhaka, Bangladesh</span>
               </li>
               <li className="flex items-center gap-3">
-                <Phone className="w-5 h-5 text-secondary shrink-0" />
+                <Phone className="w-5 h-5 text-primary shrink-0" />
                 <span>+880 1234 567890</span>
               </li>
               <li className="flex items-center gap-3">
-                <Mail className="w-5 h-5 text-secondary shrink-0" />
+                <Mail className="w-5 h-5 text-primary shrink-0" />
                 <span>info@skyroot-realestate.com</span>
               </li>
             </ul>
@@ -64,8 +64,8 @@ export const Footer = () => {
                 placeholder="Email address" 
                 className="bg-white/5 border border-white/10 rounded-lg px-4 py-2 text-sm w-full focus:outline-none focus:border-secondary"
               />
-              <button className="bg-secondary p-2 rounded-lg hover:bg-secondary/90 transition-colors">
-                <Globe className="w-5 h-5" />
+              <button className="bg-primary p-2 rounded-lg hover:bg-neutral transition-colors">
+                <Globe className="w-5 h-5 " />
               </button>
             </div>
           </div>

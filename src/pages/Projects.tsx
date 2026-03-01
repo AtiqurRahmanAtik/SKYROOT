@@ -32,7 +32,7 @@ export const Projects = () => {
                 className={cn(
                   "px-6 py-2 rounded-full text-sm font-bold transition-all",
                   filter === f 
-                    ? "bg-secondary text-white shadow-lg shadow-secondary/20" 
+                    ? "bg-primary text-white shadow-lg shadow-secondary/20" 
                     : "bg-base-content/5 text-base-content/60 hover:bg-base-content/10"
                 )}
               >
@@ -40,7 +40,7 @@ export const Projects = () => {
               </button>
             ))}
           </div>
-          <button className="flex items-center gap-2 text-sm font-bold text-neutral hover:text-secondary transition-colors">
+          <button className="flex items-center gap-2 text-sm font-bold text-neutral hover:text-white transition-colors">
             <Download className="w-4 h-4" /> Download Brochure
           </button>
         </div>
@@ -70,7 +70,7 @@ export const Projects = () => {
                 <span className={cn(
                   "bg-[#1a1a1a] text-white text-[10px] font-bold px-4 py-2 uppercase tracking-widest",
                   project.status === 'Completed' ? "bg-neutral" : 
-                  project.status === 'Upcoming' ? "bg-neutral" : "bg-secondary"
+                  project.status === 'Upcoming' ? "bg-neutral" : "bg-primary"
                 )}>
                   {project.status === 'Completed' ? 'HANDED OVER' : 
                    project.status === 'Upcoming' ? 'SOLD OUT' : 
@@ -101,7 +101,7 @@ export const Projects = () => {
         <div className="bg-base-100 rounded-3xl overflow-hidden grid grid-cols-1 lg:grid-cols-2">
           <div className="p-12 md:p-20 space-y-8">
             <div className="space-y-2">
-              <div className="text-secondary text-xs font-bold uppercase tracking-[0.2em]">Ongoing Flagship</div>
+              <div className="text-white text-xs font-bold uppercase tracking-[0.2em]">Ongoing Flagship</div>
               <h2 className="text-4xl font-black text-neutral">Skyroot Horizon</h2>
             </div>
             <p className="text-base-content/70 leading-relaxed">
@@ -109,16 +109,16 @@ export const Projects = () => {
             </p>
             <div className="flex flex-wrap gap-8">
               <div className="flex items-center gap-3">
-                <MapPin className="text-secondary" />
+                <MapPin className="text-white" />
                 <span className="font-bold text-neutral">Gulshan 2, Dhaka</span>
               </div>
               <div className="text-base-content/40">Est. Completion: 2026</div>
             </div>
-            <button className="bg-secondary text-white px-10 py-4 rounded-xl font-bold hover:bg-secondary/90 transition-all shadow-xl shadow-secondary/20">
+            <button className="bg-primary text-white px-10 py-4 rounded-xl font-bold hover:bg-primary transition-all shadow-xl shadow-secondary/20">
               Explore Exclusive Access
             </button>
           </div>
-          <div className="h-full min-h-[400px]">
+          <div className="h-full min-h-100">
             <img 
               src="https://images.unsplash.com/photo-1545324418-cc1a3fa10c00?auto=format&fit=crop&w=1000&q=80" 
               alt="Skyroot Horizon"

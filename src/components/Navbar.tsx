@@ -25,25 +25,27 @@ export const Navbar = () => {
         </Link>
 
         {/* Desktop Nav */}
-        <nav className="hidden md:flex items-center gap-10">
-          {navLinks.map((link) => (
-            <Link
-              key={link.name}
-              to={link.path}
-              className={cn(
-                "text-sm font-semibold transition-colors hover:text-secondary",
-                location.pathname === link.path ? "text-secondary" : "text-neutral"
-              )}
-            >
-              {link.name}
-            </Link>
-          ))}
-        </nav>
+       <nav className="hidden md:flex items-center gap-10">
+  {navLinks.map((link) => (
+    <Link
+      key={link.name}
+      to={link.path}
+      className={cn(
+        "text-sm font-semibold transition-colors hover:text-primary", // Hover uses brand blue
+        location.pathname === link.path 
+          ? "text-primary border-b-2 border-primary" // Active state uses primary
+          : "text-neutral"
+      )}
+    >
+      {link.name}
+    </Link>
+  ))}
+</nav>
 
         <div className="flex items-center gap-4">
-          <button className="hidden md:block bg-secondary text-white px-6 py-2.5 rounded-lg text-sm font-bold hover:bg-secondary/90 transition-all shadow-lg shadow-secondary/20">
-            Get a Quote
-          </button>
+         <button className="hidden md:block btn btn-primary rounded-lg text-white font-bold shadow-lg shadow-primary/20">
+  Get a Quote
+</button>
           
           {/* Mobile Menu Toggle */}
           <button 
@@ -69,13 +71,13 @@ export const Navbar = () => {
               onClick={() => setIsOpen(false)}
               className={cn(
                 "text-lg font-bold transition-colors",
-                location.pathname === link.path ? "text-secondary" : "text-neutral"
+                location.pathname === link.path ? "text-white" : "text-neutral"
               )}
             >
               {link.name}
             </Link>
           ))}
-          <button className="w-full bg-secondary text-white py-4 rounded-lg font-bold">
+          <button className="w-full bg-primary text-white py-4 rounded-lg font-bold">
             Get a Quote
           </button>
         </motion.div>

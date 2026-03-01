@@ -8,7 +8,7 @@ export const About = () => {
       {/* Hero Section */}
       <section className="relative py-32 lg:py-48 bg-neutral text-white overflow-hidden">
         <div className="absolute inset-0 opacity-20">
-            <div className="absolute top-0 right-0 w-96 h-96 bg-secondary rounded-full blur-[150px] translate-x-1/2 -translate-y-1/2"></div>
+            <div className="absolute top-0 right-0 w-96 h-96 bg-primary rounded-full blur-[150px] translate-x-1/2 -translate-y-1/2"></div>
             <div className="absolute bottom-0 left-0 w-96 h-96 bg-blue-600 rounded-full blur-[150px] -translate-x-1/2 translate-y-1/2"></div>
         </div>
         
@@ -62,11 +62,11 @@ export const About = () => {
             
             <div className="grid grid-cols-2 gap-8 pt-8 border-t border-gray-100">
               <div>
-                <div className="text-4xl font-bold text-secondary mb-2">15+</div>
+                <div className="text-4xl font-bold text-white mb-2">15+</div>
                 <div className="text-sm text-gray-500 uppercase tracking-wider">Years of Experience</div>
               </div>
               <div>
-                <div className="text-4xl font-bold text-secondary mb-2">50+</div>
+                <div className="text-4xl font-bold text-white mb-2">50+</div>
                 <div className="text-sm text-gray-500 uppercase tracking-wider">Projects Completed</div>
               </div>
             </div>
@@ -93,12 +93,12 @@ export const About = () => {
       <section className="bg-gray-50 py-24 px-6 lg:px-10">
         <div className="max-w-7xl mx-auto">
           <div className="text-center mb-16">
-            <span className="text-secondary font-bold tracking-widest uppercase text-sm">Leadership</span>
+            <span className="text-white font-bold tracking-widest uppercase text-sm">Leadership</span>
             <h2 className="text-4xl font-bold text-neutral mt-3">Guided by Visionaries</h2>
           </div>
 
           <div className="bg-white rounded-3xl overflow-hidden shadow-xl border border-gray-100 flex flex-col lg:flex-row">
-            <div className="lg:w-2/5 h-[500px] lg:h-auto relative">
+            <div className="lg:w-2/5 h-125 lg:h-auto relative">
               <img 
                 src="https://images.unsplash.com/photo-1560250097-0b93528c311a?auto=format&fit=crop&w=800&q=80" 
                 alt="Ar. Shahed Al Mamun"
@@ -114,7 +114,7 @@ export const About = () => {
             <div className="lg:w-3/5 p-10 md:p-16 flex flex-col justify-center space-y-8">
               <div className="hidden lg:block">
                 <h3 className="text-3xl font-bold text-neutral">Ar. Shahed Al Mamun</h3>
-                <p className="text-secondary font-medium text-lg">B.Arch (MIAB), Managing Director</p>
+                <p className="text-white font-medium text-lg">B.Arch (MIAB), Managing Director</p>
               </div>
               
               <blockquote className="text-xl text-gray-600 italic leading-relaxed border-l-4 border-secondary pl-6">
@@ -210,7 +210,7 @@ export const About = () => {
           <p className="text-white/60 text-lg mb-10 max-w-2xl mx-auto">
             Let's discuss your vision. Whether it's a new home or a commercial investment, we are here to guide you.
           </p>
-          <button className="bg-secondary text-white px-10 py-4 rounded-full font-bold hover:bg-secondary/90 transition-all shadow-lg shadow-secondary/20">
+          <button className="bg-primary text-white px-10 py-4 rounded-full font-bold hover:/90 transition-all shadow-lg shadow-secondary/20">
             Get in Touch
           </button>
         </div>

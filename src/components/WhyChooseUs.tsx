@@ -75,7 +75,7 @@ export const WhyChooseUs = () => {
               
               <Link 
                 to="/projects" 
-                className="group inline-flex items-center gap-3 px-8 py-4 bg-gray-900 text-white rounded-full font-medium transition-all hover:bg-blue-600 hover:shadow-lg hover:shadow-blue-600/30"
+                className="group inline-flex items-center gap-3 px-8 py-4 bg-primary text-white rounded-full font-medium transition-all hover:bg-blue-600 hover:shadow-lg hover:shadow-blue-600/30"
               >
                 View Our Process
                 <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />

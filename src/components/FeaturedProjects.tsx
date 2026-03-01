@@ -21,7 +21,7 @@ export const FeaturedProjects = () => {
         {/* Header */}
         <div className="px-6 lg:px-10 mb-12 flex flex-col md:flex-row justify-between items-end gap-6 w-full">
           <div className="space-y-4 max-w-2xl">
-            <span className="text-sm font-bold tracking-widest text-gray-500 uppercase">
+            <span className="text-sm  font-bold tracking-widest text-gray-500 uppercase">
               FEATURED PROJECTS
             </span>
             <h2 className="text-3xl md:text-4xl font-bold text-[#0B2C4A] leading-tight">
@@ -34,17 +34,17 @@ export const FeaturedProjects = () => {
           <div className="flex gap-4">
             <button 
               onClick={() => scroll('left')}
-              className="w-12 h-12 rounded-full border border-gray-300 flex items-center justify-center hover:bg-[#0B2C4A] hover:text-white hover:border-[#0B2C4A] transition-all duration-300 group"
+              className="w-12 h-12 rounded-full bg-primary text-white border border-gray-300 flex items-center justify-center hover:bg-primary hover:text-white hover:border-[#0B2C4A] transition-all duration-300 group"
               aria-label="Previous project"
             >
-              <ArrowLeft className="w-5 h-5 text-gray-600 group-hover:text-white transition-colors" />
+              <ArrowLeft className="w-5 h-5 text-white group-hover:text-white transition-colors" />
             </button>
             <button 
               onClick={() => scroll('right')}
-              className="w-12 h-12 rounded-full border border-gray-300 flex items-center justify-center hover:bg-[#0B2C4A] hover:text-white hover:border-[#0B2C4A] transition-all duration-300 group"
+              className="w-12 h-12 rounded-full border bg-primary text-white border-gray-300 flex items-center justify-center hover:bg-primary hover:text-white hover:border-[#0B2C4A] transition-all duration-300 group"
               aria-label="Next project"
             >
-              <ArrowRight className="w-5 h-5 text-gray-600 group-hover:text-white transition-colors" />
+              <ArrowRight className="w-5 h-5 text-white group-hover:text-white  transition-colors" />
             </button>
           </div>
         </div>
@@ -86,7 +86,7 @@ export const FeaturedProjects = () => {
                   </p>
                   <Link 
                     to={`/projects`} 
-                    className="inline-block px-8 py-3 border border-white/50 hover:bg-white hover:text-black hover:border-white transition-all duration-300 text-xs font-bold uppercase tracking-widest"
+                    className="inline-block bg-primary px-8 py-3  hover:bg-white hover:text-black hover:border-white transition-all duration-300 text-xs font-bold uppercase tracking-widest"
                   >
                     Explore
                   </Link>

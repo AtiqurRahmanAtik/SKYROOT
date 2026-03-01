@@ -82,7 +82,7 @@ export const Contact = () => {
                 />
               </div>
 
-              <button className="w-full bg-secondary text-white py-5 rounded-xl font-black text-lg hover:bg-secondary/90 transition-all flex items-center justify-center gap-3 shadow-xl shadow-secondary/20">
+              <button className="w-full bg-primary text-white py-5 rounded-xl font-black text-lg hover:bg-primary transition-all flex items-center justify-center gap-3 shadow-xl shadow-secondary/20">
                 Submit Request <Send className="w-5 h-5" />
               </button>
             </form>
@@ -92,20 +92,20 @@ export const Contact = () => {
           <div className="space-y-12">
             <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
               <div className="bg-base-100 p-8 rounded-2xl space-y-4 border border-base-content/5">
-                <div className="w-12 h-12 bg-secondary/10 rounded-xl flex items-center justify-center">
-                  <Phone className="text-secondary" />
+                <div className="w-12 h-12 bg-primary rounded-xl flex items-center justify-center">
+                  <Phone className="text-primary" />
                 </div>
                 <h3 className="font-bold text-lg text-neutral">Call Us</h3>
                 <p className="text-base-content/60 text-sm">Mon-Fri from 9am to 6pm.</p>
-                <a href="tel:+8801818100503" className="block text-secondary font-bold hover:underline">+88 01818-100 503</a>
+                <a href="tel:+8801818100503" className="block text-primary font-bold hover:underline">+88 01818-100 503</a>
               </div>
               <div className="bg-base-100 p-8 rounded-2xl space-y-4 border border-base-content/5">
-                <div className="w-12 h-12 bg-secondary/10 rounded-xl flex items-center justify-center">
-                  <Mail className="text-secondary" />
+                <div className="w-12 h-12 bg-primary rounded-xl flex items-center justify-center">
+                  <Mail className="text-white" />
                 </div>
                 <h3 className="font-bold text-lg text-neutral">Email Us</h3>
                 <p className="text-base-content/60 text-sm">Our team is here to help.</p>
-                <a href="mailto:info@skyrootre.com" className="block text-secondary font-bold hover:underline">info@skyrootre.com</a>
+                <a href="mailto:info@skyrootre.com" className="block text-white font-bold hover:underline">info@skyrootre.com</a>
               </div>
             </div>
 
@@ -117,7 +117,7 @@ export const Contact = () => {
                   <img src="https://images.unsplash.com/photo-1497366754035-f200968a6e72?auto=format&fit=crop&w=200&q=80" alt="Office" className="w-full h-full object-cover" />
                 </div>
                 <div>
-                  <h4 className="font-bold text-lg text-neutral group-hover:text-secondary transition-colors">Aftab Nagar Branch</h4>
+                  <h4 className="font-bold text-lg text-neutral group-hover:text-white transition-colors">Aftab Nagar Branch</h4>
                   <p className="text-base-content/60 text-sm mt-1">Sector 1, Road 4, House 12, Aftab Nagar, Dhaka - 1212, Bangladesh</p>
                 </div>
               </div>
@@ -127,7 +127,7 @@ export const Contact = () => {
                   <img src="https://images.unsplash.com/photo-1497215728101-856f4ea42174?auto=format&fit=crop&w=200&q=80" alt="Office" className="w-full h-full object-cover" />
                 </div>
                 <div>
-                  <h4 className="font-bold text-lg text-neutral group-hover:text-secondary transition-colors">Mohammadpur Branch</h4>
+                  <h4 className="font-bold text-lg text-neutral group-hover:text-white transition-colors">Mohammadpur Branch</h4>
                   <p className="text-base-content/60 text-sm mt-1">Block C, Zakir Hossain Road, Mohammadpur, Dhaka - 1207, Bangladesh</p>
                 </div>
               </div>
@@ -142,7 +142,7 @@ export const Contact = () => {
               />
               <div className="absolute inset-0 bg-gradient-to-t from-neutral/60 to-transparent flex items-end p-8">
                 <div className="flex items-center gap-3 text-white">
-                  <MapPin className="text-secondary" />
+                  <MapPin className="text-white" />
                   <span className="font-bold uppercase tracking-widest text-sm">Dhaka Headquarters</span>
                 </div>
               </div>

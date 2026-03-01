@@ -82,7 +82,8 @@ export const HeroSlider = () => {
               {slides[current].subtitle}
             </p>
             <h1 className="text-5xl md:text-7xl font-black text-white mb-6 tracking-tighter">
-              {slides[current].title} <span className="text-secondary">{slides[current].highlight}</span> {slides[current].titleEnd}
+              {/* FIXED: Replaced text-secondary with text-primary */}
+              {slides[current].title} <span className="text-primary">{slides[current].highlight}</span> {slides[current].titleEnd}
             </h1>
             <p className="text-xl text-white/70 leading-relaxed mb-10">
               {slides[current].description}
@@ -105,7 +106,8 @@ export const HeroSlider = () => {
               key={index}
               onClick={() => setCurrent(index)}
               className={`w-3 h-3 rounded-full transition-all ${
-                current === index ? "bg-secondary w-8" : "bg-white/50 hover:bg-white"
+                // FIXED: Replaced bg-secondary with bg-primary
+                current === index ? "bg-primary w-8" : "bg-white/50 hover:bg-white"
               }`}
             />
           ))}

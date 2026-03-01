@@ -16,7 +16,7 @@ export const ClientTestimonials = () => {
       <section className="pt-32 pb-20 px-6 text-center bg-white">
         <div className="max-w-7xl mx-auto">
           <nav className="flex justify-center items-center text-sm text-gray-500 mb-6">
-            <Link to="/" className="hover:text-secondary transition-colors">Home</Link>
+            <Link to="/" className="hover:text-white transition-colors">Home</Link>
             <span className="mx-2">/</span>
             <span className="text-gray-900 font-medium">Testimonials</span>
           </nav>
@@ -56,7 +56,7 @@ export const ClientTestimonials = () => {
               transition={{ delay: index * 0.1 }}
               className="bg-white rounded-2xl p-10 shadow-lg border border-gray-100 flex flex-col items-center text-center hover:shadow-xl transition-shadow"
             >
-              <div className="w-16 h-16 bg-blue-50 rounded-full flex items-center justify-center mb-6 text-secondary">
+              <div className="w-16 h-16 bg-blue-50 rounded-full flex items-center justify-center mb-6 text-white">
                 <stat.icon className="w-8 h-8" />
               </div>
               <h3 className="text-4xl font-bold text-blue-600 mb-2">{stat.number}</h3>
@@ -121,7 +121,7 @@ export const ClientTestimonials = () => {
           </div>
 
           <div className="text-center">
-            <button className="inline-flex items-center gap-2 text-gray-500 hover:text-secondary font-medium transition-colors">
+            <button className="inline-flex items-center gap-2 text-gray-500 hover:text-white font-medium transition-colors">
               Load More Reviews
               <ChevronDown className="w-4 h-4" />
             </button>

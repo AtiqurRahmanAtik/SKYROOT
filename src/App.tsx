@@ -11,7 +11,7 @@ import { ClientTestimonials } from './pages/ClientTestimonials';
 const PublicLayout = () => (
   <div className="min-h-screen flex flex-col font-primary">
     <Navbar />
-    <main className="flex-grow">
+    <main className="grow">
       <Outlet />
     </main>
     <Footer />

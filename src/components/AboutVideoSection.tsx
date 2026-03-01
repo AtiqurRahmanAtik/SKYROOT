@@ -21,7 +21,7 @@ export const AboutVideoSection = () => {
               <span className="text-sm font-bold tracking-widest text-gray-500 uppercase">
                 ABOUT US
               </span>
-              <h2 className="text-4xl md:text-5xl font-bold text-[#0B2C4A] leading-tight">
+              <h2 className="text-4xl md:text-5xl font-bold text-primary leading-tight">
                 REDEFINING YOUR STANDARD OF <br className="hidden md:block" />
                 LIVING
               </h2>
@@ -46,7 +46,7 @@ export const AboutVideoSection = () => {
               </p>
             </div>
 
-            <button className="px-10 py-3 border border-emerald-600 text-gray-800 font-bold hover:bg-emerald-600 hover:text-white transition-all duration-300 rounded-sm text-sm">
+            <button className="px-10 py-3 border  text-white font-bold bg-primary hover:bg-emerald-600 hover:text-white transition-all duration-300 rounded-sm text-sm">
               Learn More
             </button>
           </motion.div>

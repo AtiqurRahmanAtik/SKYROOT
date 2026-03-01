@@ -59,7 +59,7 @@ export const AIAssistant = () => {
             {/* Header */}
             <div className="bg-neutral p-4 flex items-center justify-between text-white">
               <div className="flex items-center gap-3">
-                <div className="w-8 h-8 bg-secondary rounded-lg flex items-center justify-center">
+                <div className="w-8 h-8 bg-primary rounded-lg flex items-center justify-center">
                   <Bot className="w-5 h-5" />
                 </div>
                 <div>
@@ -84,7 +84,7 @@ export const AIAssistant = () => {
                   <div className={cn(
                     "max-w-[85%] p-3 rounded-2xl text-sm",
                     msg.role === 'user' 
-                      ? "bg-secondary text-white rounded-tr-none" 
+                      ? "bg-primary text-white rounded-tr-none" 
                       : "bg-white text-neutral shadow-sm border border-base-content/5 rounded-tl-none"
                   )}>
                     <div className="markdown-body">
@@ -96,7 +96,7 @@ export const AIAssistant = () => {
               {isLoading && (
                 <div className="flex justify-start">
                   <div className="bg-white p-3 rounded-2xl shadow-sm border border-base-content/5 rounded-tl-none">
-                    <Loader2 className="w-4 h-4 animate-spin text-secondary" />
+                    <Loader2 className="w-4 h-4 animate-spin text-white" />
                   </div>
                 </div>
               )}
@@ -115,7 +115,7 @@ export const AIAssistant = () => {
               <button 
                 onClick={handleSend}
                 disabled={isLoading}
-                className="bg-secondary text-white p-2 rounded-xl hover:bg-secondary/90 transition-colors disabled:opacity-50"
+                className="bg-primary text-white p-2 rounded-xl hover:bg-primary transition-colors disabled:opacity-50"
               >
                 <Send className="w-5 h-5" />
               </button>
@@ -126,7 +126,7 @@ export const AIAssistant = () => {
 
       <button
         onClick={() => setIsOpen(!isOpen)}
-        className="w-14 h-14 bg-secondary text-white rounded-full flex items-center justify-center shadow-xl shadow-secondary/30 hover:scale-110 transition-transform active:scale-95"
+        className="w-14 h-14 bg-primary text-white rounded-full flex items-center justify-center shadow-xl shadow-secondary/30 hover:scale-110 transition-transform active:scale-95"
       >
         <MessageSquare className="w-6 h-6" />
       </button>

@@ -24,8 +24,8 @@ export const Home = () => {
       <section className="bg-neutral py-24">
         <div className="max-w-7xl mx-auto px-6 lg:px-10 grid grid-cols-1 md:grid-cols-2 gap-10">
           <div className="bg-white/5 p-12 rounded-2xl border border-white/10 space-y-6">
-            <div className="w-12 h-12 bg-secondary/20 rounded-lg flex items-center justify-center">
-              <Zap className="text-secondary" />
+            <div className="w-12 h-12 bg-primary rounded-lg flex items-center justify-center">
+              <Zap className="text-white" />
             </div>
             <h3 className="text-2xl font-bold text-white">Our Mission</h3>
             <p className="text-base-100/60 leading-relaxed">
@@ -33,8 +33,8 @@ export const Home = () => {
             </p>
           </div>
           <div className="bg-white/5 p-12 rounded-2xl border border-white/10 space-y-6">
-            <div className="w-12 h-12 bg-secondary/20 rounded-lg flex items-center justify-center">
-              <Users className="text-secondary" />
+            <div className="w-12 h-12 bg-primary rounded-lg flex items-center justify-center">
+              <Users className="text-white" />
             </div>
             <h3 className="text-2xl font-bold text-white">Our Vision</h3>
             <p className="text-base-100/60 leading-relaxed">
@@ -73,10 +73,10 @@ export const Home = () => {
           </p>
           
           <div className="flex flex-col sm:flex-row items-center justify-center gap-6 pt-4">
-            <Link to="/contact" className="w-full sm:w-auto bg-white text-neutral px-8 py-4 rounded-full font-medium hover:bg-secondary hover:text-white transition-all duration-300 min-w-[200px]">
+            <Link to="/contact" className="w-full sm:w-auto bg-primary text-white px-8 py-4 rounded-full font-medium hover:bg-primary hover:text-white transition-all duration-300 min-w-50">
               Schedule a Meeting
             </Link>
-            <Link to="/projects" className="w-full sm:w-auto border border-white/30 text-white px-8 py-4 rounded-full font-medium hover:bg-white/10 transition-all duration-300 min-w-[200px]">
+            <Link to="/projects" className="w-full sm:w-auto border border-white/30 text-white px-8 py-4 rounded-full font-medium hover:bg-primary hover:border-none transition-all duration-300 min-w-50">
               View Our Portfolio
             </Link>
           </div>

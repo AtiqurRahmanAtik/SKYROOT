@@ -43,7 +43,7 @@ export default {
     themes: [
       {
         mytheme: {
-          "primary": "#147bff",     
+          "primary": "#1a53ba",     
           "secondary": "#a04fff",    
           "accent": "#00bda9",       
           "neutral": "#181818",    
@@ -52,7 +52,8 @@ export default {
           "info": "#147bff",          
           "success": "#ccc141",       
           "warning": "#cd3c84",       
-          "error": "#cd3c84",         
+          "error": "#cd3c84", 
+          "white": "FFFFFF"        
         },
       },
       "light",
