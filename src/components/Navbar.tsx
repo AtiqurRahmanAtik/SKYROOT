@@ -17,6 +17,8 @@ export const Navbar = () => {
     { name: 'Contact', path: '/contact' },
   ];
 
+
+  
   return (
     <header className="sticky top-0 z-50 bg-base-100/80 backdrop-blur-md border-b border-base-content/5">
       <div className="max-w-7xl mx-auto px-6 lg:px-10 py-4 flex items-center justify-between">

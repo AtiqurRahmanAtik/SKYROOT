@@ -9,7 +9,7 @@ export const Footer = () => {
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 mb-16">
           <div className="space-y-6">
             <div className="flex items-center gap-3">
-              <img src={Logo} alt="Skyroot Real Estate" className="h-20 w-auto brightness-0 invert" />
+              <img src={Logo} alt="Skyroot Real Estate" className="h-20 w-auto text-primary" />
             </div>
             <p className="text-base-100/60 text-sm leading-relaxed">
               A premier corporate real estate developer dedicated to structural excellence and urban innovation. Setting the benchmark for over 15 years.
@@ -62,7 +62,7 @@ export const Footer = () => {
               <input 
                 type="email" 
                 placeholder="Email address" 
-                className="bg-white/5 border border-white/10 rounded-lg px-4 py-2 text-sm w-full focus:outline-none focus:border-secondary"
+                className="bg-white/5 border border-white/10 rounded-lg px-4 py-2 text-sm w-full focus:outline-none focus:border-primary"
               />
               <button className="bg-primary p-2 rounded-lg hover:bg-neutral transition-colors">
                 <Globe className="w-5 h-5 " />

@@ -14,7 +14,7 @@ export const Projects = () => {
       {/* Page Header */}
       <section className="bg-neutral py-24 px-6 lg:px-10">
         <div className="max-w-7xl mx-auto">
-          <h1 className="text-5xl md:text-6xl font-black text-white mb-6">Our Portfolio</h1>
+          <h1 className="text-5xl md:text-6xl font-black text-primary mb-6">Our Portfolio</h1>
           <p className="text-white/60 text-xl max-w-2xl leading-relaxed">
             Discover Skyroot's commitment to architectural excellence and sustainable urban development through our diverse range of world-class residential and commercial projects.
           </p>
@@ -40,7 +40,7 @@ export const Projects = () => {
               </button>
             ))}
           </div>
-          <button className="flex items-center gap-2 text-sm font-bold text-neutral hover:text-white transition-colors">
+          <button className="flex items-center gap-2 text-sm font-bold text-primary hover:text-white hover:bg-primary hover:rounded-2xl hover:p-2 transition-colors">
             <Download className="w-4 h-4" /> Download Brochure
           </button>
         </div>
@@ -87,7 +87,7 @@ export const Projects = () => {
                   {project.location}
                 </p>
                 
-                <div className="inline-block border border-white/30 px-8 py-3 text-[10px] font-bold text-white uppercase tracking-[0.2em] hover:bg-white hover:text-neutral transition-colors duration-300">
+                <div className="inline-block border bg-primary border-white/30 px-8 py-3 text-[10px] font-bold text-white uppercase tracking-[0.2em] hover:bg-neutral hover:text-white transition-colors duration-300">
                   Explore
                 </div>
               </div>

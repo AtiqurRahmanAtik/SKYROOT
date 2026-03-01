@@ -110,7 +110,7 @@ export const AIAssistant = () => {
                 onChange={(e) => setInput(e.target.value)}
                 onKeyDown={(e) => e.key === 'Enter' && handleSend()}
                 placeholder="Ask about our projects..."
-                className="flex-grow bg-base-content/2 border border-base-content/10 rounded-xl px-4 py-2 text-sm focus:outline-none focus:border-secondary"
+                className="flex-grow bg-base-content/2 border border-base-content/10 rounded-xl px-4 py-2 text-sm focus:outline-none focus:border-primary"
               />
               <button 
                 onClick={handleSend}

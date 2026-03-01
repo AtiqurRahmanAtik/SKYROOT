@@ -3,6 +3,8 @@ import { motion } from 'motion/react';
 import { Send, Phone, Mail, MapPin, MessageSquare } from 'lucide-react';
 
 export const Contact = () => {
+
+
   return (
     <div className="min-h-screen bg-white">
       {/* Hero Section */}
@@ -15,7 +17,7 @@ export const Contact = () => {
           />
         </div>
         <div className="relative z-10 text-center px-6">
-          <h1 className="text-5xl md:text-7xl font-black text-white mb-4 tracking-tighter">Get In Touch</h1>
+          <h1 className="text-5xl md:text-7xl font-black text-primary mb-4 tracking-tighter">Get In Touch</h1>
           <p className="text-white/80 text-lg max-w-xl mx-auto font-medium">
             Let's build your future together. Reach out to our dedicated team for expert real estate guidance.
           </p>
@@ -40,7 +42,7 @@ export const Contact = () => {
                   <input 
                     type="text" 
                     placeholder="John Doe"
-                    className="w-full bg-white border border-base-content/10 rounded-xl px-6 py-4 focus:outline-none focus:border-secondary transition-colors"
+                    className="w-full bg-white border border-base-content/10 rounded-xl px-6 py-4 focus:outline-none focus:border-primary transition-colors"
                   />
                 </div>
                 <div className="space-y-2">
@@ -48,7 +50,7 @@ export const Contact = () => {
                   <input 
                     type="email" 
                     placeholder="john@example.com"
-                    className="w-full bg-white border border-base-content/10 rounded-xl px-6 py-4 focus:outline-none focus:border-secondary transition-colors"
+                    className="w-full bg-white border border-base-content/10 rounded-xl px-6 py-4 focus:outline-none focus:border-primary transition-colors"
                   />
                 </div>
               </div>
@@ -59,12 +61,12 @@ export const Contact = () => {
                   <input 
                     type="tel" 
                     placeholder="+880 1XXX-XXXXXX"
-                    className="w-full bg-white border border-base-content/10 rounded-xl px-6 py-4 focus:outline-none focus:border-secondary transition-colors"
+                    className="w-full bg-white border border-base-content/10 rounded-xl px-6 py-4 focus:outline-none focus:border-primary transition-colors"
                   />
                 </div>
                 <div className="space-y-2">
                   <label className="text-xs font-bold text-neutral uppercase tracking-widest">Inquiry Type</label>
-                  <select className="w-full bg-white border border-base-content/10 rounded-xl px-6 py-4 focus:outline-none focus:border-secondary transition-colors appearance-none">
+                  <select className="w-full bg-white border border-base-content/10 rounded-xl px-6 py-4 focus:outline-none focus:border-primary transition-colors appearance-none">
                     <option>Sales Inquiry</option>
                     <option>Investment Opportunity</option>
                     <option>General Support</option>
@@ -78,7 +80,7 @@ export const Contact = () => {
                 <textarea 
                   rows={5}
                   placeholder="Tell us more about your interest..."
-                  className="w-full bg-white border border-base-content/10 rounded-xl px-6 py-4 focus:outline-none focus:border-secondary transition-colors resize-none"
+                  className="w-full bg-white border border-base-content/10 rounded-xl px-6 py-4 focus:outline-none focus:border-primary transition-colors resize-none"
                 />
               </div>
 
@@ -93,7 +95,7 @@ export const Contact = () => {
             <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
               <div className="bg-base-100 p-8 rounded-2xl space-y-4 border border-base-content/5">
                 <div className="w-12 h-12 bg-primary rounded-xl flex items-center justify-center">
-                  <Phone className="text-primary" />
+                  <Phone className="text-white" />
                 </div>
                 <h3 className="font-bold text-lg text-neutral">Call Us</h3>
                 <p className="text-base-content/60 text-sm">Mon-Fri from 9am to 6pm.</p>
@@ -112,7 +114,7 @@ export const Contact = () => {
             <div className="space-y-6">
               <h3 className="text-2xl font-black text-neutral">Our Offices</h3>
               
-              <div className="group bg-white p-6 rounded-2xl border border-base-content/5 hover:border-secondary/30 transition-all shadow-sm flex gap-6">
+              <div className="group bg-white p-6 rounded-2xl border border-base-content/5 hover:/30 transition-all shadow-sm flex gap-6">
                 <div className="w-20 h-20 rounded-xl overflow-hidden shrink-0">
                   <img src="https://images.unsplash.com/photo-1497366754035-f200968a6e72?auto=format&fit=crop&w=200&q=80" alt="Office" className="w-full h-full object-cover" />
                 </div>
@@ -122,7 +124,7 @@ export const Contact = () => {
                 </div>
               </div>
 
-              <div className="group bg-white p-6 rounded-2xl border border-base-content/5 hover:border-secondary/30 transition-all shadow-sm flex gap-6">
+              <div className="group bg-white p-6 rounded-2xl border border-base-content/5 hover:border-primary transition-all shadow-sm flex gap-6">
                 <div className="w-20 h-20 rounded-xl overflow-hidden shrink-0">
                   <img src="https://images.unsplash.com/photo-1497215728101-856f4ea42174?auto=format&fit=crop&w=200&q=80" alt="Office" className="w-full h-full object-cover" />
                 </div>

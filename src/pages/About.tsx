@@ -1,8 +1,11 @@
-import React from 'react';
+
 import { motion } from 'motion/react';
 import { Shield, Zap, Users, Globe, Award, Target, Briefcase, CheckCircle } from 'lucide-react';
 
+
 export const About = () => {
+
+
   return (
     <div className="min-h-screen bg-white overflow-hidden">
       {/* Hero Section */}
@@ -27,7 +30,7 @@ export const About = () => {
             className="text-5xl md:text-7xl font-black tracking-tight mb-8"
           >
             Building Legacies, <br />
-            <span className="text-transparent bg-clip-text bg-gradient-to-r from-secondary to-orange-300">
+            <span className="text-transparent bg-clip-text bg-gradient-to-r from-primary to-primary">
               Crafting Dreams.
             </span>
           </motion.h1>
@@ -47,7 +50,7 @@ export const About = () => {
       <section className="py-24 px-6 lg:px-10 max-w-7xl mx-auto">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
           <div className="space-y-8">
-            <h2 className="text-4xl font-bold text-neutral">Our Story</h2>
+            <h2 className="text-4xl font-bold text-primary">Our Story</h2>
             <div className="space-y-6 text-lg text-gray-600 leading-relaxed">
               <p>
                 Founded in 2008, Skyroot Real Estate began with a singular vision: to bring world-class architectural standards to the heart of Dhaka. What started as a boutique firm has grown into a premier developer known for structural integrity and aesthetic finesse.
@@ -94,7 +97,7 @@ export const About = () => {
         <div className="max-w-7xl mx-auto">
           <div className="text-center mb-16">
             <span className="text-white font-bold tracking-widest uppercase text-sm">Leadership</span>
-            <h2 className="text-4xl font-bold text-neutral mt-3">Guided by Visionaries</h2>
+            <h2 className="text-4xl font-bold text-primary mt-3">Guided by Visionaries</h2>
           </div>
 
           <div className="bg-white rounded-3xl overflow-hidden shadow-xl border border-gray-100 flex flex-col lg:flex-row">
@@ -117,7 +120,7 @@ export const About = () => {
                 <p className="text-white font-medium text-lg">B.Arch (MIAB), Managing Director</p>
               </div>
               
-              <blockquote className="text-xl text-gray-600 italic leading-relaxed border-l-4 border-secondary pl-6">
+              <blockquote className="text-xl text-gray-600 italic leading-relaxed border-l-4 border-primary pl-6">
                 "Architecture is not just about buildings; it's about the souls that inhabit them. At Skyroot, our design philosophy revolves around the harmony between structural precision and human comfort. Every blueprint we sign is a promise of quality and a commitment to urban progress."
               </blockquote>
 
@@ -149,7 +152,7 @@ export const About = () => {
       {/* Core Values */}
       <section className="py-24 px-6 lg:px-10 max-w-7xl mx-auto">
         <div className="text-center mb-16">
-          <h2 className="text-4xl font-bold text-neutral mb-4">Our Core Values</h2>
+          <h2 className="text-4xl font-bold text-primary mb-4">Our Core Values</h2>
           <p className="text-gray-500 max-w-2xl mx-auto">
             The principles that guide every decision we make and every brick we lay.
           </p>
