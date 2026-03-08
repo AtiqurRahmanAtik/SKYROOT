@@ -11,6 +11,8 @@ import TermsAndCondition from './pages/Footer/TermsAndCondition';
 import PrivacyPolicy from './pages/Footer/PrivacyPolicy';
 import CookiesPolicy from './pages/Footer/CookiesPolicy';
 import RefundPolicy from './pages/Footer/RefundPolicy';
+import { ProjectDetails } from './pages/ProjectDetails/ProjectDetails';
+import { FeaturedProjects } from './components/FeaturedProjects';
 
 const PublicLayout = () => (
   <div className="min-h-screen flex flex-col font-primary">
@@ -31,6 +33,13 @@ export default function App() {
         <Route element={<PublicLayout />}>
           <Route path="/" element={<Home />} />
           <Route path="/projects" element={<Projects />} />
+          {/* Your main page with the carousel */}
+        <Route path="/" element={<FeaturedProjects />} />
+        
+        
+       
+       {/* MUST be exactly :id to match useParams() */}
+        <Route path="/project/:id" element={<ProjectDetails />} />
           <Route path="/about" element={<About />} />
           <Route path="/testimonials" element={<ClientTestimonials />} />
           <Route path="/contact" element={<Contact />} />

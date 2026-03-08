@@ -6,15 +6,15 @@ const slides = [
   {
     id: 1,
     image: "https://images.unsplash.com/photo-1584132967334-10e028bd69f7?auto=format&fit=crop&w=1920&q=80",
-    subtitle: "Skyroot Signature",
-    title: "Serenity in the",
-    highlight: "Sky",
+    subtitle: "আমরা বিশ্বাসে মাটিতে দাঁড়িয়ে",
+    title: " আকাশ ছোঁয়ার  ",
+    highlight: "স্বপ্ন দেখি",
     titleEnd: "",
-    description: "Experience luxury living with our signature rooftop amenities, blending lush greenery with panoramic views of Dhaka."
+    description: "Rooted in Trust, Rising to the Sky"
   },
   {
     id: 2,
-    image: "https://images.unsplash.com/photo-1599595078742-b6f121983e37?auto=format&fit=crop&w=1920&q=80",
+     image: "https://images.unsplash.com/photo-1584132967334-10e028bd69f7?auto=format&fit=crop&w=1920&q=80",
     subtitle: "Structural Integrity",
     title: "Built to",
     highlight: "Last",

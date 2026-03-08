@@ -1,11 +1,15 @@
 import { useRef } from 'react';
 import { motion } from 'motion/react';
 import { ArrowLeft, ArrowRight } from 'lucide-react';
-import { projects, featuredProjects } from '../constants';
+import {  featuredProjects } from '../constants';
 import { Link } from 'react-router-dom';
 
+
+
 export const FeaturedProjects = () => {
+
   const scrollContainerRef = useRef<HTMLDivElement>(null);
+
 
   const scroll = (direction: 'left' | 'right') => {
     if (scrollContainerRef.current) {
@@ -14,6 +18,8 @@ export const FeaturedProjects = () => {
       current.scrollBy({ left: scrollAmount, behavior: 'smooth' });
     }
   };
+
+
 
   return (
     <section className="py-24 bg-white overflow-hidden">
@@ -84,12 +90,17 @@ export const FeaturedProjects = () => {
                   <p className="text-white/70 text-sm line-clamp-2 max-w-sm">
                     {project.description}
                   </p>
-                  <Link 
-                    to={`/projects`} 
-                    className="inline-block bg-primary px-8 py-3  hover:bg-white hover:text-black hover:border-white transition-all duration-300 text-xs font-bold uppercase tracking-widest"
-                  >
-                    Explore
-                  </Link>
+                  {/* Change this: */}
+{/* <Link to={`/projects`} ...> */}
+
+{/* To this: */}
+<Link 
+  to={`/project/${project.id}`} 
+  className="inline-block bg-primary px-8 py-3 hover:bg-white hover:text-black hover:border-white transition-all duration-300 text-xs font-bold uppercase tracking-widest"
+>
+  Explore
+</Link>
+                  
                 </div>
               </div>
             </motion.div>

@@ -1,13 +1,41 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 import { motion } from 'motion/react';
-import { MapPin, Download } from 'lucide-react';
+import { MapPin } from 'lucide-react';
+import { Link } from 'react-router-dom';
 import { projects } from '../constants';
 import { cn } from '../lib/utils';
 
 export const Projects = () => {
-  const [filter, setFilter] = React.useState<'All' | 'Upcoming' | 'Ongoing' | 'Completed'>('All');
+  const [filter, setFilter] = useState<'All' | 'Upcoming' | 'Ongoing' | 'Completed' | 'Consultancy'>('All');
+  
+  // --- Pagination States ---
+  const [currentPage, setCurrentPage] = useState(1);
+  const itemsPerPage = 6; // You can change this to 9 or 12 if you want more items per page!
 
+  // Reset to page 1 whenever the filter changes
+  useEffect(() => {
+    setCurrentPage(1);
+  }, [filter]);
+
+  // 1. Filter the projects
   const filteredProjects = projects.filter(p => filter === 'All' || p.status === filter);
+
+  // 2. Calculate Pagination variables
+  const totalPages = Math.ceil(filteredProjects.length / itemsPerPage) || 1;
+  const paginatedProjects = filteredProjects.slice(
+    (currentPage - 1) * itemsPerPage,
+    currentPage * itemsPerPage
+  );
+
+  // 3. Helper to generate page numbers with '...'
+  const generatePageNumbers = (current: number, total: number) => {
+    if (total <= 5) return Array.from({ length: total }, (_, i) => i + 1);
+    if (current <= 3) return [1, 2, 3, 4, '...', total];
+    if (current >= total - 2) return [1, '...', total - 3, total - 2, total - 1, total];
+    return [1, '...', current - 1, current, current + 1, '...', total];
+  };
+
+  const pageNumbers = generatePageNumbers(currentPage, totalPages);
 
   return (
     <div className="min-h-screen bg-white">
@@ -25,7 +53,7 @@ export const Projects = () => {
       <section className="max-w-7xl mx-auto px-6 lg:px-10 py-12">
         <div className="flex flex-col md:flex-row items-center justify-between gap-8 border-b border-base-content/5 pb-8">
           <div className="flex flex-wrap gap-4">
-            {['All', 'Upcoming', 'Ongoing', 'Completed'].map((f) => (
+            {['All', 'Upcoming', 'Ongoing', 'Completed', 'Consultancy'].map((f) => (
               <button
                 key={f}
                 onClick={() => setFilter(f as any)}
@@ -40,60 +68,105 @@ export const Projects = () => {
               </button>
             ))}
           </div>
-          <button className="flex items-center gap-2 text-sm font-bold text-primary hover:text-white hover:bg-primary hover:rounded-2xl hover:p-2 transition-colors">
-            <Download className="w-4 h-4" /> Download Brochure
-          </button>
         </div>
 
-        {/* Project Grid */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 py-16">
-          {filteredProjects.map((project) => (
-            <motion.div
-              layout
-              key={project.id}
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              className="group relative aspect-[3/4] overflow-hidden bg-neutral cursor-pointer"
-            >
-              {/* Background Image */}
-              <img 
-                src={project.image} 
-                alt={project.title}
-                className="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
-              />
-              
-              {/* Gradient Overlay */}
-              <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent opacity-60 transition-opacity duration-500 group-hover:opacity-80" />
-
-              {/* Status Badge */}
-              <div className="absolute top-6 left-6">
-                <span className={cn(
-                  "bg-[#1a1a1a] text-white text-[10px] font-bold px-4 py-2 uppercase tracking-widest",
-                  project.status === 'Completed' ? "bg-neutral" : 
-                  project.status === 'Upcoming' ? "bg-neutral" : "bg-primary"
-                )}>
-                  {project.status === 'Completed' ? 'HANDED OVER' : 
-                   project.status === 'Upcoming' ? 'SOLD OUT' : 
-                   project.status}
-                </span>
-              </div>
-
-              {/* Content */}
-              <div className="absolute bottom-8 left-8 right-8">
-                <h3 className="text-3xl font-black text-white uppercase leading-none mb-2">
-                  {project.title}
-                </h3>
-                <p className="text-white/80 text-xs font-bold uppercase tracking-wider mb-8">
-                  {project.location}
-                </p>
+        {/* Project Grid - USING paginatedProjects instead of filteredProjects */}
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 py-16 min-h-[600px]">
+          {paginatedProjects.length === 0 ? (
+            <div className="col-span-full flex items-center justify-center py-20 text-gray-400 font-bold uppercase tracking-widest">
+              No projects found for this category.
+            </div>
+          ) : (
+            paginatedProjects.map((project) => (
+              <motion.div
+                layout
+                key={project.id}
+                initial={{ opacity: 0, y: 20 }}
+                animate={{ opacity: 1, y: 0 }}
+                className="group relative aspect-[3/4] overflow-hidden bg-neutral cursor-pointer"
+              >
+                {/* Background Image */}
+                <img 
+                  src={project.image} 
+                  alt={project.title}
+                  className="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
+                />
                 
-                <div className="inline-block border bg-primary border-white/30 px-8 py-3 text-[10px] font-bold text-white uppercase tracking-[0.2em] hover:bg-neutral hover:text-white transition-colors duration-300">
-                  Explore
+                {/* Gradient Overlay */}
+                <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent opacity-60 transition-opacity duration-500 group-hover:opacity-80" />
+
+                {/* Status Badge */}
+                <div className="absolute top-6 left-6">
+                  <span className={cn(
+                    "bg-[#1a1a1a] text-white text-[10px] font-bold px-4 py-2 uppercase tracking-widest",
+                    project.status === 'Completed' ? "bg-neutral" : 
+                    project.status === 'Upcoming' ? "bg-neutral" : 
+                    project.status === 'Consultancy' ? "bg-secondary" : "bg-primary"
+                  )}>
+                    {project.status === 'Completed' ? 'HANDED OVER' : 
+                     project.status === 'Upcoming' ? 'SOLD OUT' : 
+                     project.status}
+                  </span>
                 </div>
-              </div>
-            </motion.div>
-          ))}
+
+                {/* Content */}
+                <div className="absolute bottom-8 left-8 right-8">
+                  <h3 className="text-3xl font-black text-white uppercase leading-none mb-2">
+                    {project.title}
+                  </h3>
+                  <p className="text-white/80 text-xs font-bold uppercase tracking-wider mb-8">
+                    {project.location}
+                  </p>
+                  
+                  <Link 
+                    to={`/project/${project.id}`}
+                    className="inline-block border bg-primary border-white/30 px-8 py-3 text-[10px] font-bold text-white uppercase tracking-[0.2em] hover:bg-neutral hover:text-white transition-colors duration-300"
+                  >
+                    Explore
+                  </Link>
+                </div>
+              </motion.div>
+            ))
+          )}
         </div>
+
+        {/* --- Pagination Controls --- */}
+        {totalPages > 1 && (
+          <div className="flex justify-center mt-4 mb-16">
+            <div className="join shadow-sm">
+              <button
+                disabled={currentPage === 1}
+                onClick={() => setCurrentPage(prev => Math.max(prev - 1, 1))}
+                className="join-item btn bg-base-100 border-base-200 hover:bg-base-200 disabled:bg-base-100 disabled:text-base-content/30"
+              >
+                «
+              </button>
+
+              {pageNumbers.map((num, idx) => (
+                <button
+                  key={idx}
+                  disabled={num === '...'}
+                  onClick={() => num !== '...' && setCurrentPage(num as number)}
+                  className={`join-item btn border-base-200 ${
+                    num === '...' ? 'bg-base-100 disabled:bg-base-100 disabled:text-base-content cursor-default' : 
+                    num === currentPage ? 'text-white border-none hover:brightness-110' : 'bg-base-100 hover:bg-base-200'
+                  }`}
+                  style={num === currentPage ? { backgroundColor: "rgb(102,204,0)" } : {}}
+                >
+                  {num}
+                </button>
+              ))}
+
+              <button
+                disabled={currentPage === totalPages}
+                onClick={() => setCurrentPage(prev => Math.min(prev + 1, totalPages))}
+                className="join-item btn bg-base-100 border-base-200 hover:bg-base-200 disabled:bg-base-100 disabled:text-base-content/30"
+              >
+                »
+              </button>
+            </div>
+          </div>
+        )}
       </section>
 
       {/* Featured Project */}
@@ -114,9 +187,12 @@ export const Projects = () => {
               </div>
               <div className="text-base-content/40">Est. Completion: 2026</div>
             </div>
-            <button className="bg-primary text-white px-10 py-4 rounded-xl font-bold hover:bg-primary transition-all shadow-xl shadow-secondary/20">
+            <Link 
+              to="/project/fp1"
+              className="inline-block bg-primary text-white px-10 py-4 rounded-xl font-bold hover:bg-primary transition-all shadow-xl shadow-secondary/20"
+            >
               Explore Exclusive Access
-            </button>
+            </Link>
           </div>
           <div className="h-full min-h-100">
             <img 
