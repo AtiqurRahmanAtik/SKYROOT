@@ -3,6 +3,7 @@ import { ArrowLeft, MapPin, CheckCircle, Download } from 'lucide-react';
 
 // Use your clean alias (Assuming constants is in your src/components folder):
 import { projects } from '@/src/constants';
+import SEO from '@/src/components/SEO';
 
 export const ProjectDetails = () => {
   const { id } = useParams();
@@ -13,6 +14,7 @@ export const ProjectDetails = () => {
   if (!project) {
     return (
       <div className="min-h-screen flex flex-col items-center justify-center bg-gray-50 px-4 text-center">
+        <SEO title="Project Not Found" description="The project you are looking for does not exist." />
         <h2 className="text-3xl md:text-4xl font-bold text-primary mb-4">Project Not Found</h2>
         <p className="text-gray-500 mb-8 max-w-md">
           The project with ID "{id}" does not exist, or the URL might be incorrect.
@@ -29,6 +31,7 @@ export const ProjectDetails = () => {
 
   return (
     <section className="min-h-screen bg-white py-24 px-6 lg:px-10">
+      <SEO title={project.title} description={project.description || `${project.title} detailed information.`} image={project.image} />
       <div className="max-w-7xl mx-auto">
 
         <Link

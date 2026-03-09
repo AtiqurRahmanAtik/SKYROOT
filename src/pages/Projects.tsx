@@ -4,11 +4,12 @@ import { MapPin } from 'lucide-react';
 import { Link } from 'react-router-dom';
 import { projects } from '../constants';
 import { cn } from '../lib/utils';
+import SEO from '../components/SEO';
 
 export const Projects = () => {
   // Removed the type annotation <'All' | 'Upcoming' | 'Ongoing' | 'Completed' | 'Consultancy'>
   const [filter, setFilter] = useState('All');
-  
+
   // --- Pagination States ---
   const [currentPage, setCurrentPage] = useState(1);
   const itemsPerPage = 6; // You can change this to 9 or 12 if you want more items per page!
@@ -41,6 +42,7 @@ export const Projects = () => {
 
   return (
     <div className="min-h-screen bg-white">
+      <SEO title="Our Portfolio" description="Discover Skyroot's commitment to architectural excellence and sustainable urban development through our diverse range of world-class residential and commercial projects." />
       {/* Page Header */}
       <section className="bg-neutral py-24 px-6 lg:px-10">
         <div className="max-w-7xl mx-auto">
@@ -62,8 +64,8 @@ export const Projects = () => {
                 onClick={() => setFilter(f)}
                 className={cn(
                   "px-6 py-2 rounded-full text-sm font-bold transition-all",
-                  filter === f 
-                    ? "bg-primary text-white shadow-lg shadow-secondary/20" 
+                  filter === f
+                    ? "bg-primary text-white shadow-lg shadow-secondary/20"
                     : "bg-base-content/5 text-base-content/60 hover:bg-base-content/10"
                 )}
               >
@@ -89,12 +91,12 @@ export const Projects = () => {
                 className="group relative aspect-3/4 overflow-hidden bg-neutral cursor-pointer"
               >
                 {/* Background Image */}
-                <img 
-                  src={project.image} 
+                <img
+                  src={project.image}
                   alt={project.title}
                   className="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
                 />
-                
+
                 {/* Gradient Overlay */}
                 <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent opacity-60 transition-opacity duration-500 group-hover:opacity-80" />
 
@@ -102,13 +104,13 @@ export const Projects = () => {
                 <div className="absolute top-6 left-6">
                   <span className={cn(
                     "bg-[#1a1a1a] text-white text-[10px] font-bold px-4 py-2 uppercase tracking-widest",
-                    project.status === 'Completed' ? "bg-neutral" : 
-                    project.status === 'Upcoming' ? "bg-neutral" : 
-                    project.status === 'Consultancy' ? "bg-secondary" : "bg-primary"
+                    project.status === 'Completed' ? "bg-neutral" :
+                      project.status === 'Upcoming' ? "bg-neutral" :
+                        project.status === 'Consultancy' ? "bg-secondary" : "bg-primary"
                   )}>
-                    {project.status === 'Completed' ? 'HANDED OVER' : 
-                     project.status === 'Upcoming' ? 'SOLD OUT' : 
-                     project.status}
+                    {project.status === 'Completed' ? 'HANDED OVER' :
+                      project.status === 'Upcoming' ? 'SOLD OUT' :
+                        project.status}
                   </span>
                 </div>
 
@@ -120,8 +122,8 @@ export const Projects = () => {
                   <p className="text-white/80 text-xs font-bold uppercase tracking-wider mb-8">
                     {project.location}
                   </p>
-                  
-                  <Link 
+
+                  <Link
                     to={`/project/${project.id}`}
                     className="inline-block border bg-primary border-white/30 px-8 py-3 text-[10px] font-bold text-white uppercase tracking-[0.2em] hover:bg-neutral hover:text-white transition-colors duration-300"
                   >
@@ -151,10 +153,9 @@ export const Projects = () => {
                   disabled={num === '...'}
                   // Removed the 'as number' assertion
                   onClick={() => num !== '...' && setCurrentPage(num)}
-                  className={`join-item btn border-base-200 ${
-                    num === '...' ? 'bg-base-100 disabled:bg-base-100 disabled:text-base-content cursor-default' : 
-                    num === currentPage ? 'text-white border-none hover:brightness-110' : 'bg-base-100 hover:bg-base-200'
-                  }`}
+                  className={`join-item btn border-base-200 ${num === '...' ? 'bg-base-100 disabled:bg-base-100 disabled:text-base-content cursor-default' :
+                      num === currentPage ? 'text-white border-none hover:brightness-110' : 'bg-base-100 hover:bg-base-200'
+                    }`}
                   style={num === currentPage ? { backgroundColor: "rgb(102,204,0)" } : {}}
                 >
                   {num}
@@ -191,7 +192,7 @@ export const Projects = () => {
               </div>
               <div className="text-base-content/40">Est. Completion: 2026</div>
             </div>
-            <Link 
+            <Link
               to="/project/fp1"
               className="inline-block bg-primary text-white px-10 py-4 rounded-xl font-bold hover:bg-primary transition-all shadow-xl shadow-secondary/20"
             >
@@ -199,8 +200,8 @@ export const Projects = () => {
             </Link>
           </div>
           <div className="h-full min-h-100">
-            <img 
-              src="https://images.unsplash.com/photo-1545324418-cc1a3fa10c00?auto=format&fit=crop&w=1000&q=80" 
+            <img
+              src="https://images.unsplash.com/photo-1545324418-cc1a3fa10c00?auto=format&fit=crop&w=1000&q=80"
               alt="Skyroot Horizon"
               className="w-full h-full object-cover"
             />

@@ -1,17 +1,19 @@
 import React from 'react';
 import { motion } from 'motion/react';
 import { Send, Phone, Mail, MapPin, MessageSquare } from 'lucide-react';
+import SEO from '../components/SEO';
 
 export const Contact = () => {
 
 
   return (
     <div className="min-h-screen bg-white">
+      <SEO title="Contact Us" description="Reach out to the dedicated Skyroot team for expert real estate guidance and inquiries." />
       {/* Hero Section */}
       <section className="relative h-[40vh] flex items-center justify-center overflow-hidden">
         <div className="absolute inset-0 z-0">
-          <img 
-            src="https://images.unsplash.com/photo-1497366216548-37526070297c?auto=format&fit=crop&w=1920&q=80" 
+          <img
+            src="https://images.unsplash.com/photo-1497366216548-37526070297c?auto=format&fit=crop&w=1920&q=80"
             alt="Office"
             className="w-full h-full object-cover brightness-50"
           />
@@ -39,16 +41,16 @@ export const Contact = () => {
               <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                 <div className="space-y-2">
                   <label className="text-xs font-bold text-neutral uppercase tracking-widest">Full Name</label>
-                  <input 
-                    type="text" 
+                  <input
+                    type="text"
                     placeholder="John Doe"
                     className="w-full bg-white border border-base-content/10 rounded-xl px-6 py-4 focus:outline-none focus:border-primary transition-colors"
                   />
                 </div>
                 <div className="space-y-2">
                   <label className="text-xs font-bold text-neutral uppercase tracking-widest">Email Address</label>
-                  <input 
-                    type="email" 
+                  <input
+                    type="email"
                     placeholder="john@example.com"
                     className="w-full bg-white border border-base-content/10 rounded-xl px-6 py-4 focus:outline-none focus:border-primary transition-colors"
                   />
@@ -58,8 +60,8 @@ export const Contact = () => {
               <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                 <div className="space-y-2">
                   <label className="text-xs font-bold text-neutral uppercase tracking-widest">Phone Number</label>
-                  <input 
-                    type="tel" 
+                  <input
+                    type="tel"
                     placeholder="+880 1XXX-XXXXXX"
                     className="w-full bg-white border border-base-content/10 rounded-xl px-6 py-4 focus:outline-none focus:border-primary transition-colors"
                   />
@@ -77,7 +79,7 @@ export const Contact = () => {
 
               <div className="space-y-2">
                 <label className="text-xs font-bold text-neutral uppercase tracking-widest">Message</label>
-                <textarea 
+                <textarea
                   rows={5}
                   placeholder="Tell us more about your interest..."
                   className="w-full bg-white border border-base-content/10 rounded-xl px-6 py-4 focus:outline-none focus:border-primary transition-colors resize-none"
@@ -113,7 +115,7 @@ export const Contact = () => {
 
             <div className="space-y-6">
               <h3 className="text-2xl font-black text-neutral">Our Offices</h3>
-              
+
               <div className="group bg-white p-6 rounded-2xl border border-base-content/5 hover:/30 transition-all shadow-sm flex gap-6">
                 <div className="w-20 h-20 rounded-xl overflow-hidden shrink-0">
                   <img src="https://images.unsplash.com/photo-1497366754035-f200968a6e72?auto=format&fit=crop&w=200&q=80" alt="Office" className="w-full h-full object-cover" />
@@ -137,8 +139,8 @@ export const Contact = () => {
 
             {/* Map Placeholder */}
             <div className="relative h-[300px] rounded-3xl overflow-hidden border border-base-content/5 group">
-              <img 
-                src="https://images.unsplash.com/photo-1524661135-423995f22d0b?auto=format&fit=crop&w=1000&q=80" 
+              <img
+                src="https://images.unsplash.com/photo-1524661135-423995f22d0b?auto=format&fit=crop&w=1000&q=80"
                 alt="Map"
                 className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700"
               />

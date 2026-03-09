@@ -1,25 +1,27 @@
 import { motion } from 'motion/react';
 import { Shield, Zap, Users, Globe, Award, Target, Briefcase, CheckCircle } from 'lucide-react';
+import SEO from '../components/SEO';
 
 export const About = () => {
   return (
     <div className="min-h-screen bg-white overflow-hidden">
+      <SEO title="About Us" description="Learn about Skyroot Real Estate. Building legacies and crafting dreams since 2008." />
       {/* Hero Section */}
       <section className="relative py-32 lg:py-48 bg-neutral text-white overflow-hidden">
         <div className="absolute inset-0 opacity-20">
-            <div className="absolute top-0 right-0 w-96 h-96 bg-primary rounded-full blur-[150px] translate-x-1/2 -translate-y-1/2"></div>
-            <div className="absolute bottom-0 left-0 w-96 h-96 bg-blue-600 rounded-full blur-[150px] -translate-x-1/2 translate-y-1/2"></div>
+          <div className="absolute top-0 right-0 w-96 h-96 bg-primary rounded-full blur-[150px] translate-x-1/2 -translate-y-1/2"></div>
+          <div className="absolute bottom-0 left-0 w-96 h-96 bg-blue-600 rounded-full blur-[150px] -translate-x-1/2 translate-y-1/2"></div>
         </div>
-        
+
         <div className="max-w-7xl mx-auto px-6 lg:px-10 relative z-10 text-center">
-          <motion.span 
+          <motion.span
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             className="inline-block py-1 px-3 rounded-full bg-white/10 border border-white/20 text-sm font-medium tracking-wide mb-6"
           >
             EST. 2008
           </motion.span>
-          <motion.h1 
+          <motion.h1
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.1 }}
@@ -30,13 +32,13 @@ export const About = () => {
               Crafting Dreams.
             </span>
           </motion.h1>
-          <motion.p 
+          <motion.p
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.2 }}
             className="text-xl text-white/70 max-w-3xl mx-auto leading-relaxed font-light"
           >
-            At Skyroot, we don't just construct buildings; we curate lifestyles. 
+            At Skyroot, we don't just construct buildings; we curate lifestyles.
             Rooted in trust and rising to the sky, we are redefining the urban landscape of Bangladesh.
           </motion.p>
         </div>
@@ -58,7 +60,7 @@ export const About = () => {
                 We believe that a home is more than just walls; it's a sanctuary. That's why every Skyroot project is designed with a human-centric approach, prioritizing light, air, and community.
               </p>
             </div>
-            
+
             <div className="grid grid-cols-2 gap-8 pt-8 border-t border-gray-100">
               <div>
                 <div className="text-4xl font-bold text-white mb-2">15+</div>
@@ -70,12 +72,12 @@ export const About = () => {
               </div>
             </div>
           </div>
-          
+
           <div className="relative">
             <div className="aspect-[4/5] rounded-2xl overflow-hidden shadow-2xl">
-              <img 
-                src="https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80" 
-                alt="Skyroot Building" 
+              <img
+                src="https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80"
+                alt="Skyroot Building"
                 className="w-full h-full object-cover"
               />
             </div>
@@ -98,8 +100,8 @@ export const About = () => {
 
           <div className="bg-white rounded-3xl overflow-hidden shadow-xl border border-gray-100 flex flex-col lg:flex-row">
             <div className="lg:w-2/5 h-125 lg:h-auto relative">
-              <img 
-                src="https://images.unsplash.com/photo-1560250097-0b93528c311a?auto=format&fit=crop&w=800&q=80" 
+              <img
+                src="https://images.unsplash.com/photo-1560250097-0b93528c311a?auto=format&fit=crop&w=800&q=80"
                 alt="Ar. Shahed Al Mamun"
                 className="w-full h-full object-cover"
               />
@@ -109,13 +111,13 @@ export const About = () => {
                 <p className="opacity-80">Managing Director</p>
               </div>
             </div>
-            
+
             <div className="lg:w-3/5 p-10 md:p-16 flex flex-col justify-center space-y-8">
               <div className="hidden lg:block">
                 <h3 className="text-3xl font-bold text-neutral">Ar. Shahed Al Mamun</h3>
                 <p className="text-white font-medium text-lg">B.Arch (MIAB), Managing Director</p>
               </div>
-              
+
               <blockquote className="text-xl text-gray-600 italic leading-relaxed border-l-4 border-primary pl-6">
                 "Architecture is not just about buildings; it's about the souls that inhabit them. At Skyroot, our design philosophy revolves around the harmony between structural precision and human comfort. Every blueprint we sign is a promise of quality and a commitment to urban progress."
               </blockquote>
@@ -156,38 +158,38 @@ export const About = () => {
 
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
           {[
-            { 
-              title: 'Integrity First', 
+            {
+              title: 'Integrity First',
               desc: 'We believe in transparent dealings. No hidden costs, no false promises. Just honest, ethical business.',
-              icon: Shield 
+              icon: Shield
             },
-            { 
-              title: 'Design Excellence', 
+            {
+              title: 'Design Excellence',
               desc: 'We don’t just build; we create art. Our designs are modern, functional, and aesthetically pleasing.',
-              icon: Target 
+              icon: Target
             },
-            { 
-              title: 'Sustainable Living', 
+            {
+              title: 'Sustainable Living',
               desc: 'We are committed to green building practices, ensuring a healthier environment for our residents.',
-              icon: Globe 
+              icon: Globe
             },
-            { 
-              title: 'Customer Centric', 
+            {
+              title: 'Customer Centric',
               desc: 'Our relationship doesn’t end at handover. We provide dedicated after-sales support for peace of mind.',
-              icon: Users 
+              icon: Users
             },
-            { 
-              title: 'Timely Delivery', 
+            {
+              title: 'Timely Delivery',
               desc: 'We respect your time. Our project management ensures that we deliver on our promised dates.',
-              icon: CheckCircle 
+              icon: CheckCircle
             },
-            { 
-              title: 'Innovation', 
+            {
+              title: 'Innovation',
               desc: 'We constantly adopt new technologies and materials to improve the quality and durability of our structures.',
-              icon: Zap 
+              icon: Zap
             },
           ].map((value, index) => (
-            <motion.div 
+            <motion.div
               key={index}
               whileHover={{ y: -5 }}
               className="bg-white p-8 rounded-2xl border border-gray-100 shadow-lg hover:shadow-xl transition-all"

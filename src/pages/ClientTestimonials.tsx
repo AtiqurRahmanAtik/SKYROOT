@@ -4,6 +4,7 @@ import { Link } from 'react-router-dom';
 import { Building2, Users, BadgeCheck, Star, ChevronDown } from 'lucide-react';
 
 import testimonialsData from '../data/testimonials.json';
+import SEO from '../components/SEO';
 
 const testimonials = testimonialsData;
 
@@ -12,6 +13,7 @@ export const ClientTestimonials = () => {
 
   return (
     <div className="bg-white">
+      <SEO title="Client Testimonials" description="Trust built over generations. See what our partners and families have to say about finding their place with Skyroot." />
       {/* Header Section */}
       <section className="pt-32 pb-20 px-6 text-center bg-white">
         <div className="max-w-7xl mx-auto">

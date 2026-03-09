@@ -2,6 +2,7 @@ import { Link } from 'react-router-dom';
 import { motion } from 'motion/react';
 import { Zap, Users } from 'lucide-react';
 import { projects } from '../constants';
+import SEO from '../components/SEO';
 
 import { HeroSlider } from '../components/HeroSlider';
 import { AboutVideoSection } from '../components/AboutVideoSection';
@@ -12,9 +13,11 @@ import { Testimonials } from '../components/Testimonials';
 export const Home = () => {
   return (
     <div className="overflow-hidden">
+      <SEO title="Home" description="Skyroot Real Estate - Providing premium services for our real estate clients with excellence and care." />
+
       {/* Hero Section */}
       <HeroSlider />
-      
+
       {/* About Video Section */}
       <AboutVideoSection />
 
@@ -54,14 +57,14 @@ export const Home = () => {
       {/* CTA Section */}
       <section className="relative py-32 overflow-hidden">
         <div className="absolute inset-0">
-          <img 
-            src="https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?ixlib=rb-4.0.3&auto=format&fit=crop&w=2070&q=80" 
-            alt="Modern Architecture" 
+          <img
+            src="https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?ixlib=rb-4.0.3&auto=format&fit=crop&w=2070&q=80"
+            alt="Modern Architecture"
             className="w-full h-full object-cover"
           />
           <div className="absolute inset-0 bg-neutral/90 mix-blend-multiply"></div>
         </div>
-        
+
         <div className="max-w-7xl mx-auto px-6 lg:px-10 relative z-10 text-center space-y-8">
           <h2 className="text-4xl md:text-6xl font-serif text-white tracking-tight">
             Ready to build your future?
@@ -69,7 +72,7 @@ export const Home = () => {
           <p className="text-white/70 text-lg md:text-xl max-w-2xl mx-auto font-light leading-relaxed">
             From concept to completion, Skyroot is your partner in creating spaces that inspire. Let's discuss your vision today.
           </p>
-          
+
           <div className="flex flex-col sm:flex-row items-center justify-center gap-6 pt-4">
             <Link to="/contact" className="w-full sm:w-auto bg-primary text-white px-8 py-4 rounded-full font-medium hover:bg-primary hover:text-white transition-all duration-300 min-w-50">
               Schedule a Meeting
