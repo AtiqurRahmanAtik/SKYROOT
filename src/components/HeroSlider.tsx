@@ -7,9 +7,9 @@ import heroImg2 from '../assets/Hero/2.jpeg';
 import heroImg3 from '../assets/Hero/3.jpeg';
 
 const slides = [
-  {
+    {
     id: 1,
-    image: heroImg1,
+    image: "https://images.unsplash.com/photo-1584132967334-10e028bd69f7?auto=format&fit=crop&w=1920&q=80",
     subtitle: "আমরা বিশ্বাসে মাটিতে দাঁড়িয়ে",
     title: " আকাশ ছোঁয়ার  ",
     highlight: "স্বপ্ন দেখি",
@@ -18,23 +18,25 @@ const slides = [
   },
   {
     id: 2,
-    image: heroImg2,
-    subtitle: "কাঠামোগত দৃঢ়তা",
-    title: "টেকসইভাবে",
-    highlight: "নির্মিত",
+     image: "https://images.unsplash.com/photo-1584132967334-10e028bd69f7?auto=format&fit=crop&w=1920&q=80",
+    subtitle: "Structural Integrity",
+    title: "Built to",
+    highlight: "Last",
     titleEnd: "",
-    description: "প্রাচীন স্থাপত্যের দীর্ঘস্থায়ী শক্তির দ্বারা অনুপ্রাণিত হয়ে আমাদের ভিত্তিগুলো এমনভাবে তৈরি করা হয়েছে, যা সময়ের পরীক্ষায় টিকে থাকবে।"
+    description: "Inspired by the enduring strength of ancient architecture, our foundations are engineered to withstand the test of time."
   },
-  {
+ {
     id: 3,
-    image: heroImg3,
-    subtitle: "আধুনিক জীবনযাপন",
-    title: "অভ্যন্তরীণ",
-    highlight: "আভিজাত্য",
+    image: "https://images.unsplash.com/photo-1618221195710-dd6b41faaea6?auto=format&fit=crop&w=1920&q=80",
+    subtitle: "Modern Living",
+    title: "Interior",
+    highlight: "Elegance",
     titleEnd: "",
-    description: "সমসাময়িক পারিবারিক জীবনযাপনের জন্য ডিজাইন করা প্রশস্ত ও আলো ঝলমলে অন্দরমহল, যেখানে রয়েছে প্রিমিয়াম ফিনিশিং এবং স্মার্ট হোম সুবিধা।"
+    description: "Spacious, light-filled interiors designed for contemporary family living, featuring premium finishes and smart home integration."
   }
 ];
+
+
 
 export const HeroSlider = () => {
   const [current, setCurrent] = useState(0);

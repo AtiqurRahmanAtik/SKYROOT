@@ -3,6 +3,9 @@ import { motion } from 'motion/react';
 import { Send, Phone, Mail, MapPin, MessageSquare } from 'lucide-react';
 import SEO from '../components/SEO';
 
+import skyroot from "../assets/logo1.png";
+import dot from "../assets/Dot1.png"
+
 export const Contact = () => {
 
 
@@ -114,25 +117,54 @@ export const Contact = () => {
             </div>
 
             <div className="space-y-6">
-              <h3 className="text-2xl font-black text-neutral">Our Offices</h3>
+              <h3 className="text-2xl font-black text-primary">Our Offices</h3>
+
+
+                <div className="group bg-white p-6 rounded-2xl border border-base-content/5 hover:border-primary transition-all shadow-sm flex gap-6">
+                <div className="w-20 h-20 rounded-xl overflow-hidden shrink-0">
+                  <img src={skyroot} alt="Office" className="w-full h-full object-cover" />
+                </div>
+                <div>
+                   <h4 className="font-bold text-lg text-neutral  transition-colors">Corporate office</h4>
+                  <h4 className="font-bold text-lg text-neutral  transition-colors">Mohammadpur Branch</h4>
+                  <p className="text-base-content/60 text-sm mt-1">H # 23/C (GF), R # 11, P.C Culture Housing, Mohammedpur, Dhaka-1207</p>
+                </div>
+              </div>
+
+              <div className="group bg-white p-6 rounded-2xl border border-base-content/5 hover:/30 hover:border-primary transition-all shadow-sm flex gap-6">
+                <div className="w-20 h-20 rounded-xl overflow-hidden shrink-0">
+                  <img src={skyroot} alt="Office" className="w-full h-full object-cover" />
+                </div>
+                <div>
+                   <h4 className="font-bold text-lg text-neutral  transition-colors">Corporate office</h4>
+                  <h4 className="font-bold text-lg text-neutral  transition-colors">Aftab Nagar Branch</h4>
+                  <p className="text-base-content/60 text-sm mt-1">H # 20 (1st F), B # F, R # 01, S # 01, Jahurul Islam City, Aftab Nagor, Badda, Dhaka 1212</p>
+                </div>
+              </div>
+
+            
+            </div>
+
+               <div className="space-y-6">
+              <h3 className="text-2xl font-black text-primary">Design Studio</h3>
 
               <div className="group bg-white p-6 rounded-2xl border border-base-content/5 hover:/30 transition-all shadow-sm flex gap-6">
                 <div className="w-20 h-20 rounded-xl overflow-hidden shrink-0">
-                  <img src="https://images.unsplash.com/photo-1497366754035-f200968a6e72?auto=format&fit=crop&w=200&q=80" alt="Office" className="w-full h-full object-cover" />
+                  <img src={dot} alt="Office" className="w-full h-full object-cover" />
                 </div>
                 <div>
-                  <h4 className="font-bold text-lg text-neutral group-hover:text-white transition-colors">Aftab Nagar Branch</h4>
-                  <p className="text-base-content/60 text-sm mt-1">Sector 1, Road 4, House 12, Aftab Nagar, Dhaka - 1212, Bangladesh</p>
+                  <h4 className="font-bold text-lg text-neutral group-hover:text-white transition-colors">Naogaon Office</h4>
+                  <p className="text-base-content/60 text-sm mt-1">Time square, (3rd floor), Bazar Rood, Naogaon</p>
                 </div>
               </div>
 
               <div className="group bg-white p-6 rounded-2xl border border-base-content/5 hover:border-primary transition-all shadow-sm flex gap-6">
                 <div className="w-20 h-20 rounded-xl overflow-hidden shrink-0">
-                  <img src="https://images.unsplash.com/photo-1497215728101-856f4ea42174?auto=format&fit=crop&w=200&q=80" alt="Office" className="w-full h-full object-cover" />
+                  <img src={dot} alt="Office" className="w-full h-full object-cover" />
                 </div>
                 <div>
-                  <h4 className="font-bold text-lg text-neutral group-hover:text-white transition-colors">Mohammadpur Branch</h4>
-                  <p className="text-base-content/60 text-sm mt-1">Block C, Zakir Hossain Road, Mohammadpur, Dhaka - 1207, Bangladesh</p>
+                  <h4 className="font-bold text-lg text-neutral group-hover:text-white transition-colors">Dhaka Office</h4>
+                  <p className="text-base-content/60 text-sm mt-1">H# 23/C (GF), R# 11, P.C Culture Housing, Mohammedpur, Dhaka-1207</p>
                 </div>
               </div>
             </div>
@@ -142,7 +174,7 @@ export const Contact = () => {
               <img
                 src="https://images.unsplash.com/photo-1524661135-423995f22d0b?auto=format&fit=crop&w=1000&q=80"
                 alt="Map"
-                className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700"
+                className="w-full h-full object-cover transition-transform duration-700"
               />
               <div className="absolute inset-0 bg-gradient-to-t from-neutral/60 to-transparent flex items-end p-8">
                 <div className="flex items-center gap-3 text-white">
