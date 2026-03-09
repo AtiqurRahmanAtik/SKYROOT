@@ -33,25 +33,22 @@ export default function App() {
         <Route element={<PublicLayout />}>
           <Route path="/" element={<Home />} />
           <Route path="/projects" element={<Projects />} />
+          
           {/* Your main page with the carousel */}
-        <Route path="/" element={<FeaturedProjects />} />
-        
-        
-       
-       {/* MUST be exactly :id to match useParams() */}
-        <Route path="/project/:id" element={<ProjectDetails />} />
+          <Route path="/" element={<FeaturedProjects />} />
+          
+          {/* MUST be exactly :id to match useParams() */}
+          <Route path="/project/:id" element={<ProjectDetails />} />
           <Route path="/about" element={<About />} />
           <Route path="/testimonials" element={<ClientTestimonials />} />
           <Route path="/contact" element={<Contact />} />
 
-          {/* 2. Added Legal & Policy Routes here */}
+          {/* Legal & Policy Routes */}
           <Route path="/termsOfUse" element={<TermsAndCondition />} />
           <Route path="/privacy" element={<PrivacyPolicy />} />
           <Route path="/cookies" element={<CookiesPolicy />} />
           <Route path="/refund" element={<RefundPolicy />} />
         </Route>
-
-        
       </Routes>
     </Router>
   );

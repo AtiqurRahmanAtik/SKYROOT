@@ -6,7 +6,8 @@ import { projects } from '../constants';
 import { cn } from '../lib/utils';
 
 export const Projects = () => {
-  const [filter, setFilter] = useState<'All' | 'Upcoming' | 'Ongoing' | 'Completed' | 'Consultancy'>('All');
+  // Removed the type annotation <'All' | 'Upcoming' | 'Ongoing' | 'Completed' | 'Consultancy'>
+  const [filter, setFilter] = useState('All');
   
   // --- Pagination States ---
   const [currentPage, setCurrentPage] = useState(1);
@@ -28,7 +29,8 @@ export const Projects = () => {
   );
 
   // 3. Helper to generate page numbers with '...'
-  const generatePageNumbers = (current: number, total: number) => {
+  // Removed the ': number' type annotations from the parameters
+  const generatePageNumbers = (current, total) => {
     if (total <= 5) return Array.from({ length: total }, (_, i) => i + 1);
     if (current <= 3) return [1, 2, 3, 4, '...', total];
     if (current >= total - 2) return [1, '...', total - 3, total - 2, total - 1, total];
@@ -36,8 +38,6 @@ export const Projects = () => {
   };
 
   const pageNumbers = generatePageNumbers(currentPage, totalPages);
-
-
 
   return (
     <div className="min-h-screen bg-white">
@@ -58,7 +58,8 @@ export const Projects = () => {
             {['All', 'Upcoming', 'Ongoing', 'Completed', 'Consultancy'].map((f) => (
               <button
                 key={f}
-                onClick={() => setFilter(f as any)}
+                // Removed the 'as any' assertion
+                onClick={() => setFilter(f)}
                 className={cn(
                   "px-6 py-2 rounded-full text-sm font-bold transition-all",
                   filter === f 
@@ -148,7 +149,8 @@ export const Projects = () => {
                 <button
                   key={idx}
                   disabled={num === '...'}
-                  onClick={() => num !== '...' && setCurrentPage(num as number)}
+                  // Removed the 'as number' assertion
+                  onClick={() => num !== '...' && setCurrentPage(num)}
                   className={`join-item btn border-base-200 ${
                     num === '...' ? 'bg-base-100 disabled:bg-base-100 disabled:text-base-content cursor-default' : 
                     num === currentPage ? 'text-white border-none hover:brightness-110' : 'bg-base-100 hover:bg-base-200'

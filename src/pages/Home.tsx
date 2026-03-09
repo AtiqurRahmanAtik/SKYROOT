@@ -18,8 +18,6 @@ export const Home = () => {
       {/* About Video Section */}
       <AboutVideoSection />
 
-
-
       {/* Mission & Vision */}
       <section className="bg-neutral py-24">
         <div className="max-w-7xl mx-auto px-6 lg:px-10 grid grid-cols-1 md:grid-cols-2 gap-10">

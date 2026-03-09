@@ -1,6 +1,25 @@
-@import "tailwindcss";
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Montserrat:wght@400;600&family=Poppins:wght@400;600;900&display=swap');
+@import "tailwindcss";
 @config "../tailwind.config.js";
+
+@plugin "daisyui" {
+  themes: light, dark, mytheme --default;
+}
+
+@plugin "daisyui/theme" {
+  name: "mytheme";
+  default: true;
+  --color-primary: #00abea;
+  --color-secondary: #a04fff;
+  --color-accent: #00bda9;
+  --color-neutral: #181818;
+  --color-base-100: #f2f2f2;
+  --color-base-content: #181818;
+  --color-info: #147bff;
+  --color-success: #ccc141;
+  --color-warning: #cd3c84;
+  --color-error: #cd3c84;
+}
 
 body {
   @apply bg-base-100 text-base-content antialiased;

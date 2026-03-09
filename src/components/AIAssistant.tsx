@@ -6,12 +6,14 @@ import Markdown from 'react-markdown';
 
 export const AIAssistant = () => {
   const [isOpen, setIsOpen] = React.useState(false);
-  const [messages, setMessages] = React.useState<{ role: 'user' | 'bot', content: string }[]>([
+  // Removed the <{ role: 'user' | 'bot', content: string }[]> type annotation
+  const [messages, setMessages] = React.useState([
     { role: 'bot', content: 'Hello! I am your Skyroot Assistant. How can I help you today with our real estate projects?' }
   ]);
   const [input, setInput] = React.useState('');
   const [isLoading, setIsLoading] = React.useState(false);
-  const scrollRef = React.useRef<HTMLDivElement>(null);
+  // Removed the <HTMLDivElement> type annotation
+  const scrollRef = React.useRef(null);
 
   React.useEffect(() => {
     if (scrollRef.current) {
@@ -134,7 +136,7 @@ export const AIAssistant = () => {
   );
 };
 
-// Helper for class names in this file
-function cn(...inputs: any[]) {
+// Removed the : any[] type from the inputs parameter
+function cn(...inputs) {
   return inputs.filter(Boolean).join(' ');
 }

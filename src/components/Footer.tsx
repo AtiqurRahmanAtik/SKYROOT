@@ -1,16 +1,13 @@
 import { Link } from 'react-router-dom';
 import { Mail, Phone, MapPin, Facebook, Linkedin, Instagram, Globe } from 'lucide-react';
-import Logo from '../assets/logo.svg';
+import Logo from '../assets/logo1.png';
 
-
- const policyLinks = [
-    { name: 'Terms of Use', path: '/termsOfUse' },
-    { name: 'Privacy Policy', path: '/privacy' },
-    { name: 'Cookies Policy', path: '/cookies' },
-    { name: 'Refund Policy', path: '/refund' },
-  ];
-
-
+const policyLinks = [
+  { name: 'Terms of Use', path: '/termsOfUse' },
+  { name: 'Privacy Policy', path: '/privacy' },
+  { name: 'Cookies Policy', path: '/cookies' },
+  { name: 'Refund Policy', path: '/refund' },
+];
 
 export const Footer = () => {
   return (
@@ -69,9 +66,9 @@ export const Footer = () => {
             <h4 className="font-bold text-lg mb-6">Newsletter</h4>
             <p className="text-base-100/60 text-sm mb-4">Subscribe to get the latest updates and offers.</p>
             <div className="flex gap-2">
-              <input 
-                type="email" 
-                placeholder="Email address" 
+              <input
+                type="email"
+                placeholder="Email address"
                 className="bg-white/5 border border-white/10 rounded-lg px-4 py-2 text-sm w-full focus:outline-none focus:border-primary"
               />
               <button className="bg-primary p-2 rounded-lg hover:bg-neutral transition-colors">
@@ -81,24 +78,24 @@ export const Footer = () => {
           </div>
         </div>
 
-
         <div>
-           <h4 className="text-sm font-semibold text-white mb-3">Legal</h4>
-           
-            <ul className="flex flex-col gap-2">
-              {policyLinks.map((link, index) => (
-                <li key={index}>
-                  <Link to={link.path} className="text-[13px] text-gray-400 hover:text-[#d4af37] transition-colors">
-                    {link.name}
-                  </Link>
-                </li>
-              ))}
-            </ul>
+          <h4 className="text-sm font-semibold text-white mb-3">Legal</h4>
+
+          <ul className="flex flex-col gap-2">
+            {policyLinks.map((link, index) => (
+              <li key={index}>
+                <Link to={link.path} className="text-[13px] text-gray-400 hover:text-[#d4af37] transition-colors">
+                  {link.name}
+                </Link>
+              </li>
+            ))}
+          </ul>
         </div>
 
         <div className="pt-10 border-t border-white/10 flex flex-col md:flex-row justify-between items-center gap-6">
           <p className="text-base-100/60 text-xs">
-            © 2024 Skyroot Real Estate. All rights reserved.
+            {/* Added dynamic year here as a bonus! */}
+            © {new Date().getFullYear()} Skyroot Real Estate. All rights reserved.
           </p>
           <div className="flex gap-8 text-xs text-base-100/60">
             <a href="#" className="hover:text-white transition-colors">Privacy Policy</a>

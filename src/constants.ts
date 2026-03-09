@@ -1,4 +1,4 @@
-import projectsData from '../projects.json';
+import projectsData from './data/projects.json';
 
 export interface Project {
   id: string;
@@ -10,6 +10,17 @@ export interface Project {
   description: string;
   price?: string;
   unitsLeft?: number;
+  landArea?: string;
+  facing?: string;
+  buildingHeight?: string;
+  unitsPerFloor?: string;
+  totalUnits?: string;
+  apartmentSizes?: string;
+  parkings?: string;
+  consultant?: string;
+  features?: string[];
+  pdfUrl?: string;
+  additionalImages?: string[];
 }
 
 // THIS EXACT LINE IS WHAT REACT IS LOOKING FOR

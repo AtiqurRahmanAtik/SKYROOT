@@ -3,7 +3,7 @@ import { motion } from 'motion/react';
 import { Link } from 'react-router-dom';
 import { Building2, Users, BadgeCheck, Star, ChevronDown } from 'lucide-react';
 
-import testimonialsData from '../../testimonials.json';
+import testimonialsData from '../data/testimonials.json';
 
 const testimonials = testimonialsData;
 
@@ -15,18 +15,16 @@ export const ClientTestimonials = () => {
       {/* Header Section */}
       <section className="pt-32 pb-20 px-6 text-center bg-white">
         <div className="max-w-7xl mx-auto">
-         
-         
-          
-          <motion.h1 
+
+          <motion.h1
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             className="text-5xl md:text-6xl font-black text-primary mb-4 tracking-tight"
           >
             Trust Built Over Generations
           </motion.h1>
-          
-          <motion.p 
+
+          <motion.p
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.1 }}
@@ -45,7 +43,7 @@ export const ClientTestimonials = () => {
             { icon: Users, number: "1.2k+", label: "Satisfied Clients" },
             { icon: BadgeCheck, number: "15+", label: "Years of Excellence" }
           ].map((stat, index) => (
-            <motion.div 
+            <motion.div
               key={index}
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
@@ -91,16 +89,16 @@ export const ClientTestimonials = () => {
                     <Star key={i} className="w-4 h-4 text-primary fill-current" />
                   ))}
                 </div>
-                
+
                 <blockquote className="text-gray-600 italic mb-8 flex-grow leading-relaxed">
                   "{testimonial.text}"
                 </blockquote>
-                
+
                 <div className="flex items-center gap-4 mt-auto">
                   {testimonial.image ? (
-                    <img 
-                      src={testimonial.image} 
-                      alt={testimonial.author} 
+                    <img
+                      src={testimonial.image}
+                      alt={testimonial.author}
                       className="w-12 h-12 rounded-full object-cover"
                     />
                   ) : (
@@ -130,10 +128,10 @@ export const ClientTestimonials = () => {
       <section className="py-24 bg-primary relative overflow-hidden">
         {/* Decorative geometric lines */}
         <div className="absolute inset-0 opacity-10">
-            <div className="absolute top-0 left-0 w-full h-full border-t border-white/20 transform -skew-y-6 origin-top-left"></div>
-            <div className="absolute top-1/2 left-0 w-full h-full border-t border-white/20 transform skew-y-6 origin-bottom-right"></div>
+          <div className="absolute top-0 left-0 w-full h-full border-t border-white/20 transform -skew-y-6 origin-top-left"></div>
+          <div className="absolute top-1/2 left-0 w-full h-full border-t border-white/20 transform skew-y-6 origin-bottom-right"></div>
         </div>
-        
+
         <div className="max-w-4xl mx-auto px-6 text-center relative z-10">
           <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
             Ready to Start Your Journey?
@@ -142,14 +140,14 @@ export const ClientTestimonials = () => {
             Join the hundreds of satisfied families and businesses who have chosen Skyroot for their future.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Link 
-              to="/contact" 
+            <Link
+              to="/contact"
               className="px-8 py-4 bg-blue-600 text-white rounded-lg font-bold hover:bg-blue-700 transition-colors shadow-lg shadow-blue-900/20"
             >
               Contact Us
             </Link>
-            <Link 
-              to="/contact" 
+            <Link
+              to="/contact"
               className="px-8 py-4 bg-primary text-white border border-white/20 rounded-lg font-bold hover:bg-primary transition-colors backdrop-blur-sm"
             >
               Schedule a Meeting

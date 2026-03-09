@@ -1,11 +1,7 @@
-
 import { motion } from 'motion/react';
 import { Shield, Zap, Users, Globe, Award, Target, Briefcase, CheckCircle } from 'lucide-react';
 
-
 export const About = () => {
-
-
   return (
     <div className="min-h-screen bg-white overflow-hidden">
       {/* Hero Section */}

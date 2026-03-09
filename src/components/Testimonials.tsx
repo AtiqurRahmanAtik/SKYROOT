@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import { motion, AnimatePresence } from 'motion/react';
 import { ArrowLeft, ArrowRight, Quote, Star } from 'lucide-react';
 
-import testimonialsData from '../../testimonials.json';
+import testimonialsData from '../data/testimonials.json';
 
 const testimonials = testimonialsData;
 
@@ -20,7 +20,7 @@ export const Testimonials = () => {
   return (
     <section className="bg-gray-50 py-32 relative overflow-hidden">
       <div className="max-w-7xl mx-auto px-6 lg:px-10 relative z-10">
-        
+
         {/* Header */}
         <div className="flex flex-col md:flex-row justify-between items-end mb-20 gap-8 border-b border-neutral/10 pb-10">
           <div>
@@ -29,16 +29,16 @@ export const Testimonials = () => {
               Voices of Trust
             </h2>
           </div>
-          
+
           <div className="flex items-center gap-4">
-            <button 
+            <button
               onClick={prevTestimonial}
               className="w-14 h-14 rounded-full border border-neutral/20 bg-primary flex items-center justify-center  hover:bg-neutral hover:text-white transition-all duration-300 group text-white"
               aria-label="Previous testimonial"
             >
               <ArrowLeft className="w-6 h-6 group-hover:-translate-x-1 transition-transform" />
             </button>
-            <button 
+            <button
               onClick={nextTestimonial}
               className="w-14 h-14 rounded-full border border-neutral/20 flex items-center justify-center  hover:bg-neutral hover:text-white transition-all duration-300 group bg-primary text-white"
               aria-label="Next testimonial"
@@ -62,8 +62,8 @@ export const Testimonials = () => {
               {/* Image Section */}
               <div className="lg:col-span-5 relative group order-2 lg:order-1">
                 <div className="relative aspect-[4/5] overflow-hidden rounded-2xl shadow-2xl">
-                  <img 
-                    src={testimonials[currentIndex].image} 
+                  <img
+                    src={testimonials[currentIndex].image}
                     alt={testimonials[currentIndex].author}
                     className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
                   />
@@ -81,15 +81,15 @@ export const Testimonials = () => {
                 </div>
 
                 <Quote className="w-16 h-16 text-neutral/10 fill-current" />
-                
+
                 <h3 className="text-3xl md:text-5xl font-light text-neutral leading-tight">
                   "{testimonials[currentIndex].quote}"
                 </h3>
-                
+
                 <p className="text-neutral/60 text-lg md:text-xl leading-relaxed max-w-2xl">
                   {testimonials[currentIndex].text}
                 </p>
-                
+
                 <div className="pt-8 border-t border-neutral/10 flex items-center gap-6">
                   <div>
                     <h4 className="text-xl font-bold text-neutral">
