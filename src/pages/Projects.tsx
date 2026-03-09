@@ -37,6 +37,8 @@ export const Projects = () => {
 
   const pageNumbers = generatePageNumbers(currentPage, totalPages);
 
+
+
   return (
     <div className="min-h-screen bg-white">
       {/* Page Header */}
@@ -71,7 +73,7 @@ export const Projects = () => {
         </div>
 
         {/* Project Grid - USING paginatedProjects instead of filteredProjects */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 py-16 min-h-[600px]">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 py-16 min-h-150">
           {paginatedProjects.length === 0 ? (
             <div className="col-span-full flex items-center justify-center py-20 text-gray-400 font-bold uppercase tracking-widest">
               No projects found for this category.
@@ -83,7 +85,7 @@ export const Projects = () => {
                 key={project.id}
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
-                className="group relative aspect-[3/4] overflow-hidden bg-neutral cursor-pointer"
+                className="group relative aspect-3/4 overflow-hidden bg-neutral cursor-pointer"
               >
                 {/* Background Image */}
                 <img 

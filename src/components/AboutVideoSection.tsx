@@ -100,6 +100,7 @@ export const AboutVideoSection = () => {
             )}
           </motion.div>
         </div>
+        
       </div>
     </section>
   );
