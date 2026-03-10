@@ -142,15 +142,9 @@ export const Contact = () => {
                 </div>
               </div>
 
-            
-            </div>
-
-               <div className="space-y-6">
-              <h3 className="text-2xl font-black text-primary">Design Studio</h3>
-
-              <div className="group bg-white p-6 rounded-2xl border border-base-content/5 hover:/30 transition-all shadow-sm flex gap-6">
+               <div className="group bg-white p-6 rounded-2xl border border-base-content/5 hover:/30 transition-all shadow-sm flex gap-6">
                 <div className="w-20 h-20 rounded-xl overflow-hidden shrink-0">
-                  <img src={dot} alt="Office" className="w-full h-full object-cover" />
+                  <img src={skyroot} alt="Office" className="w-full h-full object-cover" />
                 </div>
                 <div>
                   <h4 className="font-bold text-lg text-neutral group-hover:text-white transition-colors">Naogaon Office</h4>
@@ -158,12 +152,20 @@ export const Contact = () => {
                 </div>
               </div>
 
+            
+            </div>
+
+               <div className="space-y-6">
+              <h3 className="text-2xl font-black text-primary">Design Studio</h3>
+
+             
+
               <div className="group bg-white p-6 rounded-2xl border border-base-content/5 hover:border-primary transition-all shadow-sm flex gap-6">
                 <div className="w-20 h-20 rounded-xl overflow-hidden shrink-0">
                   <img src={dot} alt="Office" className="w-full h-full object-cover" />
                 </div>
                 <div>
-                  <h4 className="font-bold text-lg text-neutral group-hover:text-white transition-colors">Dhaka Office</h4>
+                  <h4 className="font-bold text-lg text-neutral group-hover:text-white transition-colors">DOT.ARCH VIEW</h4>
                   <p className="text-base-content/60 text-sm mt-1">H# 23/C (GF), R# 11, P.C Culture Housing, Mohammedpur, Dhaka-1207</p>
                 </div>
               </div>

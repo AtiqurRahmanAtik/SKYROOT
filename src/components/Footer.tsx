@@ -49,15 +49,23 @@ export const Footer = () => {
             <ul className="space-y-4 text-base-100/60 text-sm">
               <li className="flex items-start gap-3">
                 <MapPin className="w-5 h-5 text-primary shrink-0" />
-                <span>House 123, Road 45, Gulshan, Dhaka, Bangladesh</span>
+                <span>H # 23/C (GF), R # 11, P.C Culture Housing, Mohammedpur, Dhaka-1207</span>
               </li>
+
+              <li className="flex items-start gap-3">
+                <MapPin className="w-5 h-5 text-primary shrink-0" />
+                <span>H # 20 (1st F), B # F, R # 01, S # 01, Jahurul Islam City, Aftab Nagor, Badda, Dhaka 1212
+                </span>
+              </li>
+
+
               <li className="flex items-center gap-3">
                 <Phone className="w-5 h-5 text-primary shrink-0" />
-                <span>+880 1234 567890</span>
+                <span>+8801818100503</span>
               </li>
               <li className="flex items-center gap-3">
                 <Mail className="w-5 h-5 text-primary shrink-0" />
-                <span>info@skyroot-realestate.com</span>
+                <span>info@skyyrootre.com</span>
               </li>
             </ul>
           </div>

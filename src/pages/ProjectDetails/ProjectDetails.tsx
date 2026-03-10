@@ -27,12 +27,9 @@ export const ProjectDetails = () => {
     );
   }
 
-  // NOTE: Replace this with `project.pdfUrl` once you add the PDF links to your projectsData.json
-  const samplePdfUrl = "https://www.w3.org/WAI/ER/tests/xhtml/testfiles/resources/pdf/dummy.pdf";
-
-
-  
-
+  // Path to the PDF in your public folder (Assuming you renamed it to mahatab-brochure.pdf)
+  // In the future, you should add a 'pdfUrl' property to your projects data!
+  const pdfUrl = "/public/mahatab-brochure.pdf.pdf";
 
   return (
     <section className="min-h-screen bg-white py-24 px-6 lg:px-10">
@@ -98,7 +95,7 @@ export const ProjectDetails = () => {
         </div>
 
         {/* --- 2. Project at a Glance & Features --- */}
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-20 items-start mb-24">
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-20 items-start mb-16">
           {/* LEFT COLUMN: PROJECT AT A GLANCE */}
           <div>
             <h2 className="bg-primary text-white text-xl md:text-2xl font-bold uppercase tracking-widest py-4 px-6 mb-8">
@@ -181,29 +178,31 @@ export const ProjectDetails = () => {
           </div>
         </div>
 
-        {/* --- 3. NEW PDF VIEWER SECTION --- */}
-        <div>
-          {/* Green Download Button */}
-          <div className="flex justify-start mb-4">
+        {/* --- 3. PDF VIEWER SECTION --- */}
+        <div className="w-full mt-10">
+          
+          {/* File Download Button Row */}
+          <div className="flex justify-start mb-2">
             <a 
-              href={samplePdfUrl} 
-              download={`${project.title}_Brochure.pdf`} // Suggests a filename when downloading
+              href={pdfUrl} 
+              download={`${project.title}_Brochure.pdf`}
               target="_blank" 
               rel="noopener noreferrer"
-              className="bg-[#00a651] hover:bg-[#008f45] transition-colors text-white px-6 py-2.5 rounded-md flex items-center gap-2 font-bold shadow-md"
+              className="bg-[#009e4f] hover:bg-[#008040] transition-colors text-white px-4 py-2 rounded flex items-center gap-2 font-medium shadow-sm text-sm"
             >
-              Download PDF <Download className="w-5 h-5" />
+            Download <Download className="w-4 h-4" />
             </a>
           </div>
 
-          {/* PDF Iframe Viewer */}
-          <div className="w-full h-[600px] md:h-[800px] border-2 border-primary/20 rounded-md overflow-hidden shadow-lg bg-gray-100 flex items-center justify-center">
+          {/* PDF Iframe Viewer Container */}
+          <div className="w-full h-[600px] md:h-[800px] border border-gray-300 bg-[#323639] rounded overflow-hidden shadow-md flex items-center justify-center">
             <iframe 
-              src={`${samplePdfUrl}#view=FitH`} // FitH makes it zoom to fit width automatically
+              src={`${pdfUrl}#view=FitH`}
               className="w-full h-full"
-              title={` PDF Document`}
+              title={`${project?.title} Brochure`}
             />
           </div>
+          
         </div>
 
       </div>
