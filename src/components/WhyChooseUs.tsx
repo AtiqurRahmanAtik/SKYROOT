@@ -85,7 +85,7 @@ export const WhyChooseUs = () => {
             {/* Stats or Trust Indicators could go here */}
             <div className="pt-8 border-t border-gray-200 grid grid-cols-2 gap-8">
               <div>
-                <h4 className="text-3xl font-bold text-gray-900">10+</h4>
+                <h4 className="text-3xl font-bold text-gray-900">18+</h4>
                 <p className="text-sm text-gray-500 mt-1">Years Experience</p>
               </div>
               <div>

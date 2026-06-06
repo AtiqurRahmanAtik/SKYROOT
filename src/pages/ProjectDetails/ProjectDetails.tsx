@@ -35,7 +35,7 @@ export const ProjectDetails = () => {
       <div className="max-w-7xl mx-auto">
 
         <Link
-          to="/"
+          to="/projects"
           className="inline-flex items-center gap-2 mb-10 text-gray-500 hover:text-primary transition-colors font-semibold uppercase tracking-widest text-sm group"
         >
           <ArrowLeft className="w-5 h-5 transform group-hover:-translate-x-1 transition-transform" />

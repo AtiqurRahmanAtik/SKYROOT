@@ -117,12 +117,17 @@ export const ClientTestimonials = () => {
             ))}
           </div>
 
-          <div className="text-center">
-            <button className="inline-flex bg-primary text-white items-center gap-2 p-4 rounded-xl hover:text-white hover:bg-neutral font-medium transition-colors">
-              Load More Reviews
-              <ChevronDown className="w-4 h-4" />
-            </button>
-          </div>
+          {visibleCount < testimonials.length && (
+            <div className="text-center">
+              <button
+                onClick={() => setVisibleCount(prev => prev + 3)}
+                className="inline-flex bg-primary text-white items-center gap-2 p-4 rounded-xl hover:text-white hover:bg-neutral font-medium transition-colors cursor-pointer"
+              >
+                Load More Reviews
+                <ChevronDown className="w-4 h-4" />
+              </button>
+            </div>
+          )}
         </div>
       </section>
 

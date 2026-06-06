@@ -4,7 +4,7 @@
     "quote": "A space where culture thrives.",
     "text": "Skyroot didn't just build us an office; they built a space where our company culture could thrive.",
     "author": "Rahim Ahmed",
-    "role": "Skyroot Azure Heights",
+    "role": "CEO, Azure Tech",
     "location": "Gulshan, Dhaka",
     "image": "https://images.unsplash.com/photo-1560250097-0b93528c311a",
     "rating": 5
@@ -12,9 +12,9 @@
   {
     "id": 2,
     "quote": "Truly rising to the sky!",
-    "text": "Outstanding architectural vision and natural lighting.",
+    "text": "Outstanding architectural vision and natural lighting. We love our workspace at Metropolis.",
     "author": "Tanvir Hossain",
-    "role": "Skyroot Metropolis",
+    "role": "Director, Creative Labs",
     "location": "Mirpur DOHS, Dhaka",
     "image": "https://images.unsplash.com/photo-1472099645785-5658abf4ff4e",
     "rating": 5
@@ -22,11 +22,71 @@
   {
     "id": 3,
     "quote": "Safe, secure, and beautiful.",
-    "text": "Best investment we've made for our family.",
+    "text": "The best investment we've made for our family. The green spaces and playground are perfect for our children.",
     "author": "Mrs. Farhana Islam",
-    "role": "Skyroot Haven",
+    "role": "Homeowner, Skyroot Haven",
     "location": "Bashundhara R/A, Dhaka",
     "image": "https://images.unsplash.com/photo-1573496359142-b8d87734a5a2",
+    "rating": 5
+  },
+  {
+    "id": 4,
+    "quote": "Uncompromising Quality",
+    "text": "Skyroot stands out for their structural engineering and timely delivery. The handover of our retail outlet was seamless.",
+    "author": "Mustafizur Rahman",
+    "role": "MD, Rahman & Co Group",
+    "location": "Banani, Dhaka",
+    "image": "https://images.unsplash.com/photo-1519085360753-af0119f7cbe7",
+    "rating": 5
+  },
+  {
+    "id": 5,
+    "quote": "Modern Living At Its Best",
+    "text": "The double-glazed windows, smart home integration, and community halls are beyond what we expected. Phenomenal service.",
+    "author": "Dr. Naila Kamal",
+    "role": "Resident, Skyroot Oasis",
+    "location": "Uttara, Dhaka",
+    "image": "https://images.unsplash.com/photo-1580489944761-15a19d654956",
+    "rating": 5
+  },
+  {
+    "id": 6,
+    "quote": "Exceptional Post-Handover Care",
+    "text": "Their 24/7 facility management team handles every maintenance issue immediately. Truly peaceful living.",
+    "author": "Zeeshan Al-Meezan",
+    "role": "Resident, Skyroot Heights",
+    "location": "Dhanmondi, Dhaka",
+    "image": "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d",
+    "rating": 5
+  },
+  {
+    "id": 7,
+    "quote": "Masterpiece of Engineering",
+    "text": "The architectural detail in the lobby and the choice of premium materials reflects Skyroot's signature excellence.",
+    "author": "Engr. Rafiqul Anam",
+    "role": "Consultant Engineer",
+    "location": "Gulshan-2, Dhaka",
+    "image": "https://images.unsplash.com/photo-1500648767791-00dcc994a43e",
+    "rating": 5
+  },
+  {
+    "id": 8,
+    "quote": "Eco-friendly Design Choice",
+    "text": "As a strong advocate of green architecture, I appreciate their rainwater harvesting system and solar panels.",
+    "author": "Sadia Akhter",
+    "role": "Environmentalist & Architect",
+    "location": "Bashundhara R/A, Dhaka",
+    "image": "https://images.unsplash.com/photo-1544005313-94ddf0286df2",
+    "rating": 5
+  },
+  {
+    "id": 9,
+    "quote": "Highly Recommended Developer",
+    "text": "From purchasing to registration and possession, the entire transaction was completely transparent and professional.",
+    "author": "Monirul Islam",
+    "role": "Managing Partner, Prime Realties",
+    "location": "Baridhara, Dhaka",
+    "image": "https://images.unsplash.com/photo-1534528741775-53994a69daeb",
     "rating": 5
   }
 ]

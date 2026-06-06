@@ -1,10 +1,46 @@
 import React from 'react';
 import { motion } from 'motion/react';
-import { Send, Phone, Mail, MapPin, MessageSquare } from 'lucide-react';
+import { Send, Phone, Mail, MapPin, MessageSquare, CheckCircle, AlertCircle } from 'lucide-react';
 import SEO from '../components/SEO';
 
 export const Contact = () => {
+  const [formData, setFormData] = React.useState({
+    name: '',
+    email: '',
+    phone: '',
+    inquiryType: 'Sales Inquiry',
+    message: ''
+  });
+  const [submitted, setSubmitted] = React.useState(false);
+  const [error, setError] = React.useState('');
 
+  const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) => {
+    const { name, value } = e.target;
+    setFormData(prev => ({ ...prev, [name]: value }));
+  };
+
+  const handleSubmit = (e: React.FormEvent) => {
+    e.preventDefault();
+    if (!formData.name.trim() || !formData.email.trim() || !formData.message.trim()) {
+      setError('Please fill in all required fields (Name, Email, and Message).');
+      return;
+    }
+    
+    setError('');
+    setSubmitted(true);
+    
+    setFormData({
+      name: '',
+      email: '',
+      phone: '',
+      inquiryType: 'Sales Inquiry',
+      message: ''
+    });
+
+    setTimeout(() => {
+      setSubmitted(false);
+    }, 6000);
+  };
 
   return (
     <div className="min-h-screen bg-white">
@@ -37,20 +73,46 @@ export const Contact = () => {
               </p>
             </div>
 
-            <form className="space-y-6">
+            {submitted && (
+              <div className="bg-emerald-50 border border-emerald-200 text-emerald-800 p-5 rounded-xl flex items-start gap-3 animate-fade-in">
+                <CheckCircle className="w-6 h-6 text-emerald-600 shrink-0 mt-0.5" />
+                <div>
+                  <h4 className="font-bold text-base">Inquiry Submitted Successfully!</h4>
+                  <p className="text-sm text-emerald-700 mt-1">Thank you for reaching out. A representative from the Skyroot team will contact you shortly.</p>
+                </div>
+              </div>
+            )}
+
+            {error && (
+              <div className="bg-rose-50 border border-rose-200 text-rose-800 p-5 rounded-xl flex items-start gap-3">
+                <AlertCircle className="w-6 h-6 text-rose-600 shrink-0 mt-0.5" />
+                <div>
+                  <h4 className="font-bold text-base">Missing Fields</h4>
+                  <p className="text-sm text-rose-700 mt-1">{error}</p>
+                </div>
+              </div>
+            )}
+
+            <form onSubmit={handleSubmit} className="space-y-6">
               <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                 <div className="space-y-2">
-                  <label className="text-xs font-bold text-neutral uppercase tracking-widest">Full Name</label>
+                  <label className="text-xs font-bold text-neutral uppercase tracking-widest">Full Name *</label>
                   <input
                     type="text"
+                    name="name"
+                    value={formData.name}
+                    onChange={handleChange}
                     placeholder="John Doe"
                     className="w-full bg-white border border-base-content/10 rounded-xl px-6 py-4 focus:outline-none focus:border-primary transition-colors"
                   />
                 </div>
                 <div className="space-y-2">
-                  <label className="text-xs font-bold text-neutral uppercase tracking-widest">Email Address</label>
+                  <label className="text-xs font-bold text-neutral uppercase tracking-widest">Email Address *</label>
                   <input
                     type="email"
+                    name="email"
+                    value={formData.email}
+                    onChange={handleChange}
                     placeholder="john@example.com"
                     className="w-full bg-white border border-base-content/10 rounded-xl px-6 py-4 focus:outline-none focus:border-primary transition-colors"
                   />
@@ -62,13 +124,21 @@ export const Contact = () => {
                   <label className="text-xs font-bold text-neutral uppercase tracking-widest">Phone Number</label>
                   <input
                     type="tel"
+                    name="phone"
+                    value={formData.phone}
+                    onChange={handleChange}
                     placeholder="+880 1XXX-XXXXXX"
                     className="w-full bg-white border border-base-content/10 rounded-xl px-6 py-4 focus:outline-none focus:border-primary transition-colors"
                   />
                 </div>
                 <div className="space-y-2">
                   <label className="text-xs font-bold text-neutral uppercase tracking-widest">Inquiry Type</label>
-                  <select className="w-full bg-white border border-base-content/10 rounded-xl px-6 py-4 focus:outline-none focus:border-primary transition-colors appearance-none">
+                  <select
+                    name="inquiryType"
+                    value={formData.inquiryType}
+                    onChange={handleChange}
+                    className="w-full bg-white border border-base-content/10 rounded-xl px-6 py-4 focus:outline-none focus:border-primary transition-colors appearance-none"
+                  >
                     <option>Sales Inquiry</option>
                     <option>Investment Opportunity</option>
                     <option>General Support</option>
@@ -78,15 +148,18 @@ export const Contact = () => {
               </div>
 
               <div className="space-y-2">
-                <label className="text-xs font-bold text-neutral uppercase tracking-widest">Message</label>
+                <label className="text-xs font-bold text-neutral uppercase tracking-widest">Message *</label>
                 <textarea
                   rows={5}
+                  name="message"
+                  value={formData.message}
+                  onChange={handleChange}
                   placeholder="Tell us more about your interest..."
                   className="w-full bg-white border border-base-content/10 rounded-xl px-6 py-4 focus:outline-none focus:border-primary transition-colors resize-none"
                 />
               </div>
 
-              <button className="w-full bg-primary text-white py-5 rounded-xl font-black text-lg hover:bg-primary transition-all flex items-center justify-center gap-3 shadow-xl shadow-secondary/20">
+              <button className="w-full bg-primary text-white py-5 rounded-xl font-black text-lg hover:bg-primary transition-all flex items-center justify-center gap-3 shadow-xl shadow-secondary/20 cursor-pointer">
                 Submit Request <Send className="w-5 h-5" />
               </button>
             </form>

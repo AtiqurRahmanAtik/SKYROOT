@@ -78,19 +78,7 @@ export const Footer = () => {
           </div>
         </div>
 
-        <div>
-          <h4 className="text-sm font-semibold text-white mb-3">Legal</h4>
 
-          <ul className="flex flex-col gap-2">
-            {policyLinks.map((link, index) => (
-              <li key={index}>
-                <Link to={link.path} className="text-[13px] text-gray-400 hover:text-[#d4af37] transition-colors">
-                  {link.name}
-                </Link>
-              </li>
-            ))}
-          </ul>
-        </div>
 
         <div className="pt-10 border-t border-white/10 flex flex-col md:flex-row justify-between items-center gap-6">
           <p className="text-base-100/60 text-xs">
@@ -98,8 +86,10 @@ export const Footer = () => {
             © {new Date().getFullYear()} Skyroot Real Estate. All rights reserved.
           </p>
           <div className="flex gap-8 text-xs text-base-100/60">
-            <a href="#" className="hover:text-white transition-colors">Privacy Policy</a>
-            <a href="#" className="hover:text-white transition-colors">Terms of Service</a>
+            <Link to="/privacy" className="hover:text-white transition-colors">Privacy Policy</Link>
+            <Link to="/termsOfUse" className="hover:text-white transition-colors">Terms of Service</Link>
+            <Link to="/cookies" className="hover:text-white transition-colors">Cookies Policy</Link>
+            <Link to="/refund" className="hover:text-white transition-colors">Refund Policy</Link>
           </div>
         </div>
       </div>

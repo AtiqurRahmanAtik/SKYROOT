@@ -13,6 +13,7 @@ import CookiesPolicy from './pages/Footer/CookiesPolicy';
 import RefundPolicy from './pages/Footer/RefundPolicy';
 import { ProjectDetails } from './pages/ProjectDetails/ProjectDetails';
 import { FeaturedProjects } from './components/FeaturedProjects';
+import ScrollToTop from './components/ScrollToTop';
 
 const PublicLayout = () => (
   <div className="min-h-screen flex flex-col font-primary">
@@ -28,6 +29,7 @@ const PublicLayout = () => (
 export default function App() {
   return (
     <Router>
+      <ScrollToTop />
       <Routes>
         {/* Public Routes */}
         <Route element={<PublicLayout />}>

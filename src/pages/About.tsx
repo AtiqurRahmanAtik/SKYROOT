@@ -54,7 +54,7 @@ export const About = () => {
                 Founded in 2008, Skyroot Real Estate began with a singular vision: to bring world-class architectural standards to the heart of Dhaka. What started as a boutique firm has grown into a premier developer known for structural integrity and aesthetic finesse.
               </p>
               <p>
-                Over the past 15 years, we have successfully delivered over 50 landmark projects, each standing as a testament to our commitment to quality. From residential havens in Gulshan to commercial hubs in Banani, our footprint is etched in the city's skyline.
+                Over the past 18 years, we have successfully delivered over 50 landmark projects, each standing as a testament to our commitment to quality. From residential havens in Gulshan to commercial hubs in Banani, our footprint is etched in the city's skyline.
               </p>
               <p>
                 We believe that a home is more than just walls; it's a sanctuary. That's why every Skyroot project is designed with a human-centric approach, prioritizing light, air, and community.
@@ -63,11 +63,11 @@ export const About = () => {
 
             <div className="grid grid-cols-2 gap-8 pt-8 border-t border-gray-100">
               <div>
-                <div className="text-4xl font-bold text-white mb-2">15+</div>
+                <div className="text-4xl font-bold text-primary mb-2">18+</div>
                 <div className="text-sm text-gray-500 uppercase tracking-wider">Years of Experience</div>
               </div>
               <div>
-                <div className="text-4xl font-bold text-white mb-2">50+</div>
+                <div className="text-4xl font-bold text-primary mb-2">50+</div>
                 <div className="text-sm text-gray-500 uppercase tracking-wider">Projects Completed</div>
               </div>
             </div>
